@@ -11,7 +11,7 @@ module DFlipFlop(q, qBar, D, clk, rst);
   end
 endmodule
 
-module testbench;
+/*module DFlipFlop_testbench;
   reg clk, D, rst;
   wire q, qBar;
   DFlipFlop myFlipFlop(q, qBar, D, clk, rst);
@@ -33,4 +33,4 @@ module testbench;
     D = 1'b0; #10;
     $finish;
   end
-endmodule
+endmodule*/
