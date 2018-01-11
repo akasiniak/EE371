@@ -3,12 +3,12 @@
 module rippleCounter(count, clk, reset);
   input clk, reset;
   output [3:0] count;
-  wire [3:0] q, qBar;
+  wire [3:0] qBar;
   genvar i;
-  DFlipFlop zerothFlipFlop(q[0], count[0], count[0], clk, reset); //set up the flip flops
+  DFlipFlop zerothFlipFlop(count[0], qBar[0], qBar[0], clk, reset); //set up the flip flops
   generate
     for(i = 1; i < 4; i = i + 1) begin : eachFlipFlop
-      DFlipFlop nthFlipFlop(q[i], count[i], count[i], q[i - 1], reset);
+      DFlipFlop nthFlipFlop(count[i], qBar[i], qBar[i], count[i - 1], reset);
     end
   endgenerate
 endmodule
