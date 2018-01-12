@@ -1,4 +1,9 @@
 #include <stdio.h>
+//Currency conversion calculator. Takes in information from the user and returns
+//a converted amount. Since we are using floats to keep hold of our variables, there
+//are bounds on the amounts that you can calculate. The largest amount however, is
+//3.40282 * 10^38, which is well above all of the money in the world, so going over
+//the limit should not be a concern.
 int main(void) {
   float conversionRate, dollarAmount, convertedAmount;
   char conversionDirection;
