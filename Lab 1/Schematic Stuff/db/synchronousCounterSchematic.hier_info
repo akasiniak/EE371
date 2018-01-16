@@ -1,0 +1,77 @@
+|synchronousCounterSchematic
+reset => reset.IN4
+clk => clk.IN1
+count0 <= DFlipFlop:b2v_inst.q
+count1 <= DFlipFlop:b2v_inst1.q
+count2 <= DFlipFlop:b2v_inst2.q
+count3 <= DFlipFlop:b2v_inst3.q
+
+
+|synchronousCounterSchematic|DFlipFlop:b2v_inst
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|synchronousCounterSchematic|DFlipFlop:b2v_inst1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|synchronousCounterSchematic|DFlipFlop:b2v_inst2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|synchronousCounterSchematic|DFlipFlop:b2v_inst3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|synchronousCounterSchematic|clockDivider:b2v_inst9
+clkOut <= counter[25].DB_MAX_OUTPUT_PORT_TYPE
+clkIn => counter[0].CLK
+clkIn => counter[1].CLK
+clkIn => counter[2].CLK
+clkIn => counter[3].CLK
+clkIn => counter[4].CLK
+clkIn => counter[5].CLK
+clkIn => counter[6].CLK
+clkIn => counter[7].CLK
+clkIn => counter[8].CLK
+clkIn => counter[9].CLK
+clkIn => counter[10].CLK
+clkIn => counter[11].CLK
+clkIn => counter[12].CLK
+clkIn => counter[13].CLK
+clkIn => counter[14].CLK
+clkIn => counter[15].CLK
+clkIn => counter[16].CLK
+clkIn => counter[17].CLK
+clkIn => counter[18].CLK
+clkIn => counter[19].CLK
+clkIn => counter[20].CLK
+clkIn => counter[21].CLK
+clkIn => counter[22].CLK
+clkIn => counter[23].CLK
+clkIn => counter[24].CLK
+clkIn => counter[25].CLK
+clkIn => counter[26].CLK
+clkIn => counter[27].CLK
+clkIn => counter[28].CLK
+clkIn => counter[29].CLK
+clkIn => counter[30].CLK
+clkIn => counter[31].CLK
+
+

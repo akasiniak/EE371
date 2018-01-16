@@ -1,0 +1,105 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// PROGRAM		"Quartus Prime"
+// VERSION		"Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition"
+// CREATED		"Tue Jan 16 13:06:11 2018"
+
+module synchronousCounterSchematic(
+	clk,
+	reset,
+	count0,
+	count1,
+	count2,
+	count3
+);
+
+
+input wire	clk;
+input wire	reset;
+output wire	count0;
+output wire	count1;
+output wire	count2;
+output wire	count3;
+
+wire	SYNTHESIZED_WIRE_0;
+wire	SYNTHESIZED_WIRE_1;
+wire	SYNTHESIZED_WIRE_18;
+wire	SYNTHESIZED_WIRE_19;
+wire	SYNTHESIZED_WIRE_20;
+wire	SYNTHESIZED_WIRE_9;
+wire	SYNTHESIZED_WIRE_10;
+wire	SYNTHESIZED_WIRE_13;
+wire	SYNTHESIZED_WIRE_14;
+wire	SYNTHESIZED_WIRE_15;
+wire	SYNTHESIZED_WIRE_16;
+wire	SYNTHESIZED_WIRE_17;
+
+assign	count0 = SYNTHESIZED_WIRE_19;
+assign	count1 = SYNTHESIZED_WIRE_18;
+assign	count2 = SYNTHESIZED_WIRE_20;
+assign	count3 = SYNTHESIZED_WIRE_13;
+
+
+
+
+DFlipFlop	b2v_inst(
+	.D(SYNTHESIZED_WIRE_0),
+	.clk(clk),
+	.rst(reset),
+	.q(SYNTHESIZED_WIRE_19)
+	);
+
+
+DFlipFlop	b2v_inst1(
+	.D(SYNTHESIZED_WIRE_1),
+	.clk(clk),
+	.rst(reset),
+	.q(SYNTHESIZED_WIRE_18)
+	);
+
+assign	SYNTHESIZED_WIRE_16 = SYNTHESIZED_WIRE_18 | SYNTHESIZED_WIRE_19;
+
+assign	SYNTHESIZED_WIRE_14 = SYNTHESIZED_WIRE_18 | SYNTHESIZED_WIRE_20 | SYNTHESIZED_WIRE_19;
+
+assign	SYNTHESIZED_WIRE_1 = SYNTHESIZED_WIRE_19 ~^ SYNTHESIZED_WIRE_18;
+
+
+DFlipFlop	b2v_inst2(
+	.D(SYNTHESIZED_WIRE_9),
+	.clk(clk),
+	.rst(reset),
+	.q(SYNTHESIZED_WIRE_20)
+	);
+
+
+DFlipFlop	b2v_inst3(
+	.D(SYNTHESIZED_WIRE_10),
+	.clk(clk),
+	.rst(reset),
+	.q(SYNTHESIZED_WIRE_13)
+	);
+
+assign	SYNTHESIZED_WIRE_0 =  ~SYNTHESIZED_WIRE_19;
+
+assign	SYNTHESIZED_WIRE_17 =  ~SYNTHESIZED_WIRE_20;
+
+assign	SYNTHESIZED_WIRE_15 =  ~SYNTHESIZED_WIRE_13;
+
+assign	SYNTHESIZED_WIRE_10 = SYNTHESIZED_WIRE_14 ^ SYNTHESIZED_WIRE_15;
+
+assign	SYNTHESIZED_WIRE_9 = SYNTHESIZED_WIRE_16 ^ SYNTHESIZED_WIRE_17;
+
+
+endmodule

@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -4.103
+TNS   : -33.973
+
+Type  : Slow 1100mV 85C Model Setup 'clockDivider:b2v_inst9|counter[25]'
+Slack : -1.033
+TNS   : -5.713
+
+Type  : Slow 1100mV 85C Model Hold 'clockDivider:b2v_inst9|counter[25]'
+Slack : 0.350
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.379
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.529
+TNS   : -13.883
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clockDivider:b2v_inst9|counter[25]'
+Slack : -0.394
+TNS   : -3.660
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -3.952
+TNS   : -35.347
+
+Type  : Slow 1100mV 0C Model Setup 'clockDivider:b2v_inst9|counter[25]'
+Slack : -1.062
+TNS   : -5.719
+
+Type  : Slow 1100mV 0C Model Hold 'clockDivider:b2v_inst9|counter[25]'
+Slack : 0.330
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.377
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.505
+TNS   : -14.845
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clockDivider:b2v_inst9|counter[25]'
+Slack : -0.394
+TNS   : -3.604
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -3.152
+TNS   : -11.210
+
+Type  : Fast 1100mV 85C Model Setup 'clockDivider:b2v_inst9|counter[25]'
+Slack : -0.326
+TNS   : -1.539
+
+Type  : Fast 1100mV 85C Model Hold 'clockDivider:b2v_inst9|counter[25]'
+Slack : 0.145
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.202
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.498
+TNS   : -2.903
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clockDivider:b2v_inst9|counter[25]'
+Slack : 0.135
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -2.597
+TNS   : -9.668
+
+Type  : Fast 1100mV 0C Model Setup 'clockDivider:b2v_inst9|counter[25]'
+Slack : -0.284
+TNS   : -1.297
+
+Type  : Fast 1100mV 0C Model Hold 'clockDivider:b2v_inst9|counter[25]'
+Slack : 0.119
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.191
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.463
+TNS   : -2.764
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clockDivider:b2v_inst9|counter[25]'
+Slack : 0.140
+TNS   : 0.000
+
+------------------------------------------------------------
