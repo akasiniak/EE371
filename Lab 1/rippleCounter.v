@@ -1,4 +1,7 @@
 `include "DFlipFlop.v"
+// Standard ripple counter that counts from 0 to 15.
+//inputs: clock and a reset signal
+//outputs: the current count value
 
 module rippleCounter(count, clk, reset);
   input clk, reset;

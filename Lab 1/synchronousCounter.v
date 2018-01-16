@@ -1,5 +1,9 @@
 `include "DFlipFlop.v"
 
+// Standard synchronous counter that counts from 0 to 15.
+//inputs: clock and a reset signal
+//outputs: the current count value
+
 module synchronousCounter(count, clk, reset);
   input clk, reset;
   output [3:0] count;

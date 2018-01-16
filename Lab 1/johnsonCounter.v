@@ -1,3 +1,6 @@
+/* Johnson counter with active low reset. Does a left shift with 1 fill at each clock edge until the counter
+reaches 15, and then does a right shift with 0 fill.
+*/
 module johnsonCounter(count, clk, reset);
   input clk, reset;
   output reg [3:0] count;
