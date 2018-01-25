@@ -13,7 +13,7 @@ module moveBathysphere (bathysphereState, innerDoorState, outerDoorState, arrivi
             end
           end
           2'b10: begin
-            if(arriving && !outerDoorState) begin
+            if(arriving && outerDoorState) begin
               bathysphereState = 2'b01;
             end
             if(departing) begin
@@ -21,15 +21,15 @@ module moveBathysphere (bathysphereState, innerDoorState, outerDoorState, arrivi
             end
           end
           2'b01: begin
-            if(arriving && !innerDoorState) begin
+            if(arriving && innerDoorState) begin
               bathysphereState = 2'b00;
             end
-            if(departing && !outerDoorState) begin
+            if(departing && outerDoorState) begin
               bathysphereState = 2'b10;
             end
           end
           2'b00: begin
-            if(departing && !innerDoorState) begin
+            if(departing && innerDoorState) begin
               bathysphereState = 2'b01;
             end
             if(arriving) begin
