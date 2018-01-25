@@ -17,7 +17,7 @@ module outerDoor(doorState, commandSwitch, innerDoorState, pressurized, reset, c
   end
 endmodule
 
-module outerDoor_testbench;
+/*module outerDoor_testbench;
   reg clk, reset, commandSwitch, innerDoorState, pressurized;
   wire doorState;
   outerDoor dut (doorState, commandSwitch, innerDoorState, pressurized, reset, clk);
@@ -57,4 +57,4 @@ module outerDoor_testbench;
 
     $finish;
   end
-endmodule
+endmodule*/

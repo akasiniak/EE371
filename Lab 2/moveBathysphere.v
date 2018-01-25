@@ -46,7 +46,7 @@ module moveBathysphere (bathysphereState, innerDoorState, outerDoorState, arrivi
   end
 endmodule
 
-module moveBathysphere_testbench;
+/*module moveBathysphere_testbench;
   reg innerDoorState, outerDoorState, arriving, departing, clk, reset;
   wire [1:0] bathysphereState;
   moveBathysphere dut (bathysphereState, innerDoorState, outerDoorState, arriving, departing, clk, reset);
@@ -99,4 +99,4 @@ module moveBathysphere_testbench;
     #ClockDelay;
     $finish;
   end
-endmodule
+endmodule*/

@@ -55,7 +55,7 @@ module pressurizer (pressurized, innerDoorState, outerDoorState, pressurizeSigna
   end
 endmodule
 
-module pressurizer_testbench;
+/*module pressurizer_testbench;
   wire pressurized;
   reg clk, reset, pressurizeSignal, depressurizeSignal, innerDoorState, outerDoorState;
   pressurizer dut (pressurized, innerDoorState, outerDoorState, pressurizeSignal, depressurizeSignal, reset, clk);
@@ -115,4 +115,4 @@ module pressurizer_testbench;
     #ClockDelay;
     $finish;
   end
-endmodule
+endmodule*/

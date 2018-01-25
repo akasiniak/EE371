@@ -1,0 +1,107 @@
+$date
+	Thu Jan 25 15:23:49 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module EE_371_Project_2_Testbench $end
+$scope module test $end
+$var wire 1 ! CLOCK_50 $end
+$var wire 3 " KEY [2:0] $end
+$var wire 4 # SW [3:0] $end
+$var wire 7 $ LEDRWires [6:0] $end
+$var reg 7 % LEDR [6:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx00 %
+bxzz $
+b0 #
+b110 "
+0!
+$end
+#1
+b1100000 %
+b11000zz $
+1!
+#2
+0!
+#3
+1!
+#4
+0!
+b1100001 %
+b1 #
+b111 "
+#5
+1!
+#6
+0!
+#7
+1!
+#8
+0!
+#9
+1!
+#10
+0!
+b101 #
+#11
+1!
+#12
+0!
+#13
+1!
+#14
+0!
+b101 "
+#15
+1!
+#16
+0!
+#17
+1!
+#18
+0!
+b111 "
+#19
+1!
+#20
+0!
+#21
+1!
+#22
+0!
+#23
+1!
+#24
+0!
+#25
+1!
+#26
+0!
+#27
+1!
+#28
+0!
+#29
+1!
+#30
+0!
+#31
+b1110001 %
+b11100zz $
+1!
+#32
+0!
+#33
+b1110101 %
+b11101zz $
+1!
+#34
+0!
