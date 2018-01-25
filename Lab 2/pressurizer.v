@@ -16,9 +16,9 @@ module pressurizer (pressurized, innerDoorState, outerDoorState, pressurizeSigna
           end
         end
         2'b10: begin
-          if(!pressurizeSignal) begin
+          if(!pressurizeSignal && !innerDoorState && !outerDoorState && !pressurized) begin
             pressurizeState <= 2'b01;
-          end else if(!depressurizeSignal) begin
+          end else if(!depressurizeSignal && !innerDoorState && !outerDoorState && pressurized) begin
             pressurizeState <= 2'b00;
           end
         end
@@ -71,17 +71,48 @@ module pressurizer_testbench;
   initial begin
     $dumpfile("pressurizer.vcd");
     $dumpvars(1,dut);
-    reset = 1'b0; #(2*ClockDelay);
-    reset = 1'b1; #ClockDelay;
-    innerDoorState = 1'b0;
-    outerDoorState = 1'b0;
-    depressurizeSignal = 1'b1;
-    pressurizeSignal = 1'b1;
+    reset <= 1'b0; #(2*ClockDelay);
+    reset <= 1'b1; #ClockDelay;
+    innerDoorState <= 1'b0;
+    outerDoorState <= 1'b0;
+    depressurizeSignal <= 1'b1;
+    pressurizeSignal <= 1'b1;
     #ClockDelay;
-    pressurizeSignal = 1'b0; //begin pressurization
+    pressurizeSignal <= 1'b0; //begin pressurization
+    #ClockDelay;
+    pressurizeSignal <= 1'b1;
     for(i = 0; i < 10; i = i + 1)begin
         #ClockDelay;
     end
+    #ClockDelay;
+    depressurizeSignal <= 1'b0;
+    #ClockDelay;
+    depressurizeSignal <= 1'b1;
+    for(i = 0; i < 8; i = i + 1)begin
+      #ClockDelay;
+    end
+    #ClockDelay;
+    pressurizeSignal <= 1'b0; //begin pressurization but inner door is open
+    innerDoorState <= 1'b1;
+    #ClockDelay;
+    pressurizeSignal <= 1'b1;
+    #ClockDelay;
+    #ClockDelay;
+    #ClockDelay;
+    depressurizeSignal <= 1'b0; //begin depressurization but inner door is open
+    #ClockDelay;
+    #ClockDelay;
+    depressurizeSignal <= 1'b1;
+    #ClockDelay;
+    #ClockDelay;
+    innerDoorState <= 1'b0;
+    depressurizeSignal <= 1'b0;
+    #ClockDelay;
+    #ClockDelay;
+    #ClockDelay;
+    depressurizeSignal <= 1'b1;
+    #ClockDelay;
+    #ClockDelay;
     $finish;
   end
 endmodule
