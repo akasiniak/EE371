@@ -3,7 +3,7 @@ module pressurizer (pressurized, innerDoorState, outerDoorState, pressurizeSigna
   output reg pressurized;
   reg[1:0] pressurizeState; //00 means depressurize, 01 means pressurize, 10 means wait
   reg[3:0] count;
-  always @ (*) begin
+  always @ (posedge clk) begin
     case(pressurizeState)
         2'b00: begin
           if(!pressurized) begin
@@ -33,7 +33,7 @@ module pressurizer (pressurized, innerDoorState, outerDoorState, pressurizeSigna
       pressurized <= 1'b0;
     end else begin
       if(pressurizeState == 2'b01) begin
-        if(!outerDoorState && !innerDoorState) begin //can only pressurize if the doors are closed
+        if(!outerDoorState && !innerDoorState && !pressurized) begin //can only pressurize if the doors are closed and not already pressurized
           if(count == 4'd7) begin //pressurize the chamber after 7 ticks of the clock
             pressurized <= 1'b1;
             count <= 4'd0;
@@ -42,7 +42,7 @@ module pressurizer (pressurized, innerDoorState, outerDoorState, pressurizeSigna
           end
         end
       end else if(pressurizeState == 2'b00) begin
-        if(!outerDoorState && !innerDoorState) begin //can only depressurize if doors are closed
+        if(!outerDoorState && !innerDoorState && pressurized) begin //can only depressurize if doors are closed and already pressurized
           if(count == 4'd8) begin
             pressurized <= 1'b0;
             count <= 4'd0;
