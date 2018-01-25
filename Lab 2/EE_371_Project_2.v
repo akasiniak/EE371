@@ -22,7 +22,7 @@ module EE_371_Project_2(LEDR, SW, KEY, CLOCK_50);
 	innerDoor inDoor(LEDRWires[3], SW[3], LEDRWires[2], LEDR[4], KEY[0], CLOCK_50);
 	pressurizer p(LEDRWires[4], LEDRWires[2], LEDRWires[3], KEY[1], KEY[2], KEY[0], CLOCK_50);
 	// Wrong order for LEDR?
-	moveBathysphere sub(LEDRWires[6:5], LEDRWires[3], LEDRWires[2], LEDRWires[0], LEDRWires[1], CLOCK_50, KEY[0]);
+	moveBathysphere sub(LEDRWires[6:5], LEDRWires[3], LEDRWires[2], SW[0], SW[1], CLOCK_50, KEY[0]);
 endmodule
 
 module EE_371_Project_2_Testbench;
@@ -70,6 +70,7 @@ module EE_371_Project_2_Testbench;
 		#ClockDelay;
 		#ClockDelay;
 		#ClockDelay;
+
 		$finish;
   end
 
