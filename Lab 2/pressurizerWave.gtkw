@@ -1,0 +1,32 @@
+[*]
+[*] GTKWave Analyzer v3.3.48 (w)1999-2013 BSI
+[*] Thu Jan 25 00:00:13 2018
+[*]
+[dumpfile] "/Users/alexkasiniak/EE371/Lab 2/pressurizer.vcd"
+[dumpfile_mtime] "Wed Jan 24 23:59:09 2018"
+[dumpfile_size] 572
+[savefile] "/Users/alexkasiniak/EE371/Lab 2/pressurizerWave.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-0.552156 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] pressurizer_testbench.
+[sst_width] 188
+[signals_width] 150
+[sst_expanded] 1
+[sst_vpaned_height] 161
+@28
+pressurizer_testbench.dut.clk
+@22
+pressurizer_testbench.dut.count[3:0]
+@28
+pressurizer_testbench.dut.depressurizeSignal
+pressurizer_testbench.dut.innerDoorState
+pressurizer_testbench.dut.outerDoorState
+pressurizer_testbench.dut.pressurizeSignal
+pressurizer_testbench.dut.pressurizeState[1:0]
+pressurizer_testbench.dut.pressurized
+@29
+pressurizer_testbench.dut.reset
+[pattern_trace] 1
+[pattern_trace] 0
