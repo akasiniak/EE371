@@ -1,8 +1,8 @@
 //11 is off, 10, is outside, 01 is chamber, 00 is inside
-module moveBathysphere (bathysphereState, innerDoorState, outerDoorState, arriving, departing);
-  input wire innerDoorState, outerDoorState, arriving, departing;
+module moveBathysphere (bathysphereState, innerDoorState, outerDoorState, arriving, departing, clk, reset);
+  input wire innerDoorState, outerDoorState, arriving, departing, clk, reset;
   output reg [1:0] bathysphereState;
-  always @ (*) begin
+  always @ (posedge clk) begin
     if(arriving ^ departing) begin
         case(bathysphereState)
           2'b11: begin
@@ -47,9 +47,9 @@ module moveBathysphere (bathysphereState, innerDoorState, outerDoorState, arrivi
 endmodule
 
 module moveBathysphere_testbench;
-  reg innerDoorState, outerDoorState, arriving, departing;
+  reg innerDoorState, outerDoorState, arriving, departing, clk, reset;
   wire [1:0] bathysphereState;
-  moveBathysphere dut (bathysphereState, innerDoorState, outerDoorState, arriving, departing);
+  moveBathysphere dut (bathysphereState, innerDoorState, outerDoorState, arriving, departing, clk, reset);
   parameter ClockDelay = 2;
   initial begin //setup the clock
     clk <= 0;
@@ -61,6 +61,42 @@ module moveBathysphere_testbench;
   initial begin //begin testing
     $dumpfile("moveBathysphere.vcd");
     $dumpvars(1,dut);
+    innerDoorState = 1'b0;
+    outerDoorState = 1'b0;
+    arriving = 1'b0;
+    departing = 1'b0;
+    reset = 1'b0; #ClockDelay;
+    reset = 1'b1; #ClockDelay;
+    #ClockDelay;
+    arriving = 1'b1;
+    #ClockDelay;
+    departing = 1'b1;
+    #ClockDelay;
+    arriving = 1'b0;
+    #ClockDelay;
+    #ClockDelay;
+    #ClockDelay;
+    innerDoorState = 1'b1;
+    #ClockDelay;
+    #ClockDelay;
+    #ClockDelay;
+    innerDoorState = 1'b0;
+    outerDoorState = 1'b1;
+    #ClockDelay;
+    #ClockDelay;
+    arriving = 1'b1;
+    #ClockDelay;
+    outerDoorState = 1'b0;
+    departing = 1'b0;
+    innerDoorState = 1'b1;
+    #ClockDelay;
+    #ClockDelay;
+    #ClockDelay;
+    innerDoorState = 1'b0;
+    outerDoorState = 1'b1;
+    #ClockDelay;
+    #ClockDelay;
+    #ClockDelay;
     $finish;
   end
 endmodule

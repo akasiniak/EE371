@@ -1,0 +1,28 @@
+[*]
+[*] GTKWave Analyzer v3.3.48 (w)1999-2013 BSI
+[*] Thu Jan 25 22:07:41 2018
+[*]
+[dumpfile] "/Users/alexkasiniak/EE371/Lab 2/moveBathysphere.vcd"
+[dumpfile_mtime] "Thu Jan 25 22:06:54 2018"
+[dumpfile_size] 504
+[savefile] "/Users/alexkasiniak/EE371/Lab 2/moveBathysphereWave.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-1.037583 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] moveBathysphere_testbench.
+[sst_width] 188
+[signals_width] 156
+[sst_expanded] 1
+[sst_vpaned_height] 161
+@28
+moveBathysphere_testbench.dut.clk
+moveBathysphere_testbench.dut.reset
+moveBathysphere_testbench.dut.arriving
+moveBathysphere_testbench.dut.departing
+moveBathysphere_testbench.dut.innerDoorState
+moveBathysphere_testbench.dut.outerDoorState
+@29
+moveBathysphere_testbench.dut.bathysphereState[1:0]
+[pattern_trace] 1
+[pattern_trace] 0
