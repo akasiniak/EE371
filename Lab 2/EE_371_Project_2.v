@@ -1,28 +1,30 @@
-// To test
-`include "moveBathysphere.v"
-`include "pressurizer.v"
-`include "outerDoor.v"
-`include "innerDoor.v"
-
 module EE_371_Project_2(LEDR, SW, KEY, CLOCK_50);
-	output reg [6:0] LEDR;
+	output reg [7:0] LEDR;
 	input wire [3:0] SW;
 	input wire [2:0] KEY;
 	input wire CLOCK_50;
 	wire [6:0] LEDRWires;
-
+	
+	reg clk;
+   reg [31:0] counter;
+	initial begin
+		counter <= 32'd0;
+	end
+	always@(posedge CLOCK_50) begin
+		counter <= counter + 1'b1;
+	end
 
 	always@(*) begin
 		LEDR[0] = SW[0];
 		LEDR[1] = SW[1];
 		LEDR[6:2] = LEDRWires[6:2];
+		LEDR[7] = counter[24];
 	end
 
-	outerDoor outDoor(LEDRWires[2], SW[2], LEDRWires[3], LEDRWires[4], KEY[0], CLOCK_50);
-	innerDoor inDoor(LEDRWires[3], SW[3], LEDRWires[2], LEDR[4], KEY[0], CLOCK_50);
-	pressurizer p(LEDRWires[4], LEDRWires[2], LEDRWires[3], KEY[1], KEY[2], KEY[0], CLOCK_50);
-	// Wrong order for LEDR?
-	moveBathysphere sub(LEDRWires[6:5], LEDRWires[3], LEDRWires[2], SW[0], SW[1], CLOCK_50, KEY[0]);
+	outerDoor outDoor(LEDRWires[2], SW[2], LEDRWires[3], LEDRWires[4], KEY[0], counter[24]);
+	innerDoor inDoor(LEDRWires[3], SW[3], LEDRWires[2], LEDR[4], KEY[0], counter[24]);
+	pressurizer p(LEDRWires[4], LEDRWires[2], LEDRWires[3], KEY[1], KEY[2], KEY[0], counter[24]);
+	moveBathysphere sub(LEDRWires[6:5], LEDRWires[3], LEDRWires[2], SW[0], SW[1], counter[24], KEY[0]);
 endmodule
 
 module EE_371_Project_2_Testbench;
@@ -102,4 +104,4 @@ module EE_371_Project_2_Testbench;
   end
 
 
-endmodule
+endmodule 
