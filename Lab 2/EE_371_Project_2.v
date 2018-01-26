@@ -70,6 +70,33 @@ module EE_371_Project_2_Testbench;
 		#ClockDelay;
 		#ClockDelay;
 		#ClockDelay;
+		#ClockDelay;
+		SW[2] = 1'b0;
+		KEY[2] = 1'b0;
+		#ClockDelay;
+		#ClockDelay
+		KEY[2] = 1'b1;
+		#ClockDelay;
+		#ClockDelay;
+		#ClockDelay;
+		#ClockDelay;
+		#ClockDelay;
+		#ClockDelay;
+		#ClockDelay;
+		#ClockDelay;
+		#ClockDelay;
+		#ClockDelay;
+		#ClockDelay;
+		#ClockDelay;
+		#ClockDelay;
+		#ClockDelay;
+		#ClockDelay;
+		#ClockDelay;
+		#ClockDelay;
+		#ClockDelay;
+		SW[3] = 1'b1;
+		#ClockDelay;
+		#ClockDelay;
 
 		$finish;
   end

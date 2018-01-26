@@ -1,0 +1,28 @@
+[*]
+[*] GTKWave Analyzer v3.3.48 (w)1999-2013 BSI
+[*] Fri Jan 26 00:23:57 2018
+[*]
+[dumpfile] "/Users/alexkasiniak/EE371/Lab 2/EE_371_Project_2.vcd"
+[dumpfile_mtime] "Fri Jan 26 00:21:42 2018"
+[dumpfile_size] 1039
+[savefile] "/Users/alexkasiniak/EE371/Lab 2/Lab2.gtkw"
+[timestart] 0
+[size] 1440 778
+[pos] -1 -1
+*-4.252596 60 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] EE_371_Project_2_Testbench.
+[sst_width] 188
+[signals_width] 194
+[sst_expanded] 1
+[sst_vpaned_height] 224
+@28
+EE_371_Project_2_Testbench.test.CLOCK_50
+@29
+EE_371_Project_2_Testbench.test.KEY[2:0]
+@22
+EE_371_Project_2_Testbench.test.LEDRWires[6:0]
+@28
+EE_371_Project_2_Testbench.test.LEDR[6:0]
+EE_371_Project_2_Testbench.test.SW[3:0]
+[pattern_trace] 1
+[pattern_trace] 0
