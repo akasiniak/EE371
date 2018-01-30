@@ -2,22 +2,25 @@
 module moveBathysphere (bathysphereState, innerDoorState, outerDoorState, arriving, departing, clk, reset);
   input wire innerDoorState, outerDoorState, arriving, departing, clk, reset;
   output reg [1:0] bathysphereState;
+  reg [2:0] leaveArriveCount;
   always @ (posedge clk) begin
     if(arriving ^ departing) begin
         case(bathysphereState)
           2'b11: begin
-            if(arriving) begin
-              bathysphereState = 2'b10;
+            if(leaveArriveCount == 3'd4) begin
+              leaveArriveCount = leaveArriveCount + 1'b1;
             end else begin
-              bathysphereState = 2'b00;
+                leaveArriveCount = 3'd0;
+                if(arriving) begin
+                  bathysphereState = 2'b10;
+                end else begin
+                  bathysphereState = 2'b00;
+                end
             end
           end
           2'b10: begin
             if(arriving && outerDoorState) begin
               bathysphereState = 2'b01;
-            end
-            if(departing) begin
-              bathysphereState = 2'b11;
             end
           end
           2'b01: begin
@@ -32,16 +35,15 @@ module moveBathysphere (bathysphereState, innerDoorState, outerDoorState, arrivi
             if(departing && innerDoorState) begin
               bathysphereState = 2'b01;
             end
-            if(arriving) begin
-              bathysphereState = 2'b11;
-            end
           end
           default: begin
             bathysphereState = 2'b11;
+            leaveArriveCount = 3'd0;
           end
         endcase
       end else begin
         bathysphereState = 2'b11;
+        leaveArriveCount = 3'd0;
       end
   end
 endmodule
