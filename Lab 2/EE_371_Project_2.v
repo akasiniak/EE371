@@ -4,7 +4,8 @@ module EE_371_Project_2(LEDR, SW, KEY, CLOCK_50);
 	input wire [2:0] KEY;
 	input wire CLOCK_50;
 	wire [6:0] LEDRWires;
-	
+	wire [2:0] heldKeys;
+
 	reg clk;
    reg [31:0] counter;
 	initial begin
@@ -20,6 +21,10 @@ module EE_371_Project_2(LEDR, SW, KEY, CLOCK_50);
 		LEDR[6:2] = LEDRWires[6:2];
 		LEDR[7] = counter[24];
 	end
+
+	keyHolder zero (heldKeys[0], KEY[0], clk);
+	keyHolder zero (heldKeys[1], KEY[1], clk);
+	keyHolder zero (heldKeys[2], KEY[2], clk);
 
 	outerDoor outDoor(LEDRWires[2], SW[2], LEDRWires[3], LEDRWires[4], KEY[0], counter[24]);
 	innerDoor inDoor(LEDRWires[3], SW[3], LEDRWires[2], LEDR[4], KEY[0], counter[24]);
@@ -104,4 +109,4 @@ module EE_371_Project_2_Testbench;
   end
 
 
-endmodule 
+endmodule
