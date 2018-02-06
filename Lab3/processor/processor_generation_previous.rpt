@@ -1,0 +1,34 @@
+Info: Starting: Create simulation model
+Info: qsys-generate C:\Users\alexrkas\Desktop\Lab3\processor.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=C:\Users\alexrkas\Desktop\Lab3\processor\simulation --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading Lab3/processor.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 17.1]
+Progress: Parameterizing module clk_0
+Progress: Adding cpu [altera_nios2_qsys 16.1]
+Progress: Parameterizing module cpu
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 17.1]
+Progress: Parameterizing module jtag_uart
+Progress: Adding led_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module led_pio
+Progress: Adding onchip_mem [altera_avalon_onchip_memory2 17.1]
+Progress: Parameterizing module onchip_mem
+Progress: Adding switches_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module switches_pio
+Progress: Adding sys_clk_timer [altera_avalon_timer 17.1]
+Progress: Parameterizing module sys_clk_timer
+Progress: Adding sysid [altera_avalon_sysid_qsys 17.1]
+Progress: Parameterizing module sysid
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: processor.cpu: Nios II Classic cores are no longer recommended for new projects
+Info: processor.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: processor.switches_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: processor.sysid: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: processor.sysid: Time stamp will be automatically updated when this component is generated.
+Info: processor: Generating processor "processor" for SIM_VERILOG
+Error: Generation stopped, 10 or more modules remaining
+Info: processor: Done "processor" with 11 modules, 1 files
+Error: qsys-generate failed with exit code 1: 1 Error, 1 Warning
+Info: Stopping: Create simulation model

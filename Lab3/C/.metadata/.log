@@ -1,0 +1,172 @@
+!SESSION 2018-02-06 13:12:25.022 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-02-06 13:13:41.626
+!MESSAGE Indexed 'helloWorld_bsp' (83 sources, 67 headers) in 1.42 sec: 1,229 declarations; 2,627 references; 112 unresolved inclusions; 6 syntax errors; 191 unresolved names (4.7%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-02-06 13:13:44.917
+!MESSAGE Indexed 'helloWorld' (1 sources, 0 headers) in 0.005 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-02-06 13:15:19.599
+!MESSAGE Indexed 'countBinary_bsp' (83 sources, 67 headers) in 0.701 sec: 1,229 declarations; 2,627 references; 112 unresolved inclusions; 6 syntax errors; 191 unresolved names (4.7%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-02-06 13:15:22.708
+!MESSAGE Indexed 'countBinary' (1 sources, 1 headers) in 0.024 sec: 20 declarations; 76 references; 6 unresolved inclusions; 0 syntax errors; 9 unresolved names (8.6%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 13:18:07.444
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11030 --id=0x0 --timestamp=1517947784]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 13:18:10.015
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11030 --id=0x0 --timestamp=1517947784 /cygdrive/c/Users/alexrkas/Desktop/Lab3/software/countBinary/countBinary.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 13:20:04.353
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 13:20:05.176
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11030 --id=0x0 --timestamp=1517947784]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 13:20:07.717
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11030 --id=0x0 --timestamp=1517947784 /cygdrive/c/Users/alexrkas/Desktop/Lab3/software/countBinary/countBinary.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-02-06 13:57:15.858
+!MESSAGE Indexed 'lights_bsp' (83 sources, 67 headers) in 0.699 sec: 1,229 declarations; 2,627 references; 112 unresolved inclusions; 6 syntax errors; 191 unresolved names (4.7%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-02-06 13:57:18.824
+!MESSAGE Indexed 'lights' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:06:44.856
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11040 --id=0x0 --timestamp=1517953265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:06:47.366
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11040 --id=0x0 --timestamp=1517953265 /cygdrive/c/Users/alexrkas/Desktop/Lab3/software/lights/lights.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:10:02.641
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:10:03.403
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11040 --id=0x0 --timestamp=1517953265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:10:05.918
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11040 --id=0x0 --timestamp=1517953265 /cygdrive/c/Users/alexrkas/Desktop/Lab3/software/lights/lights.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:11:54.307
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11040 --id=0x0 --timestamp=1517953265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:11:56.817
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11040 --id=0x0 --timestamp=1517953265 /cygdrive/c/Users/alexrkas/Desktop/Lab3/software/lights/lights.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:22:26.893
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:22:27.716
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11040 --id=0x0 --timestamp=1517953265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:22:30.255
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11040 --id=0x0 --timestamp=1517953265 /cygdrive/c/Users/alexrkas/Desktop/Lab3/software/lights/lights.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:27:45.155
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:27:45.938
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11040 --id=0x0 --timestamp=1517953265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:27:48.483
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11040 --id=0x0 --timestamp=1517953265 /cygdrive/c/Users/alexrkas/Desktop/Lab3/software/countBinary/countBinary.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:29:08.919
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:29:09.725
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11040 --id=0x0 --timestamp=1517953265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:29:12.301
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11040 --id=0x0 --timestamp=1517953265 /cygdrive/c/Users/alexrkas/Desktop/Lab3/software/lights/lights.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:30:06.276
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:30:07.099
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11040 --id=0x0 --timestamp=1517953265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:30:09.596
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11040 --id=0x0 --timestamp=1517953265 /cygdrive/c/Users/alexrkas/Desktop/Lab3/software/lights/lights.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:33:17.507
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:33:18.314
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11040 --id=0x0 --timestamp=1517953265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:33:20.856
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11040 --id=0x0 --timestamp=1517953265 /cygdrive/c/Users/alexrkas/Desktop/Lab3/software/lights/lights.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:33:53.962
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11040 --id=0x0 --timestamp=1517953265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:33:56.493
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11040 --id=0x0 --timestamp=1517953265 /cygdrive/c/Users/alexrkas/Desktop/Lab3/software/lights/lights.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:35:14.043
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:35:14.872
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11040 --id=0x0 --timestamp=1517953265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:35:17.391
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11040 --id=0x0 --timestamp=1517953265 /cygdrive/c/Users/alexrkas/Desktop/Lab3/software/lights/lights.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:39:05.523
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:39:06.317
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11040 --id=0x0 --timestamp=1517953265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:39:08.898
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11040 --id=0x0 --timestamp=1517953265 /cygdrive/c/Users/alexrkas/Desktop/Lab3/software/countBinary/countBinary.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:42:40.126
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:42:40.952
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11040 --id=0x0 --timestamp=1517953265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:42:43.509
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11040 --id=0x0 --timestamp=1517953265 /cygdrive/c/Users/alexrkas/Desktop/Lab3/software/lights/lights.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-02-06 14:45:21.197
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-02-06 14:45:27.689
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-02-06 14:45:27.739
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
