@@ -10,8 +10,5 @@
 void main(){
 	while(1){
 		*leds = *switches;
-		printf("leds : %x", *leds);
-		printf("switches : %x", *switches);
-		printf("\n");
 	}
 }
