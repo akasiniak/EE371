@@ -27,13 +27,19 @@
 
 int main()
 {
+  char bitMask;
   char startLoop;
   startOfLoop:
   printf("Hello from Nios II!\n");
   startLoop = getchar();
   if(startLoop == 'G'){
     while(1){
-      *leds = *switches;
+      bitMask = switches  & 0b00000001;
+      if(bitMask){
+        *leds = ~*switches;
+      } else{
+        *leds = *switches
+      }
     }
   }
   goto startOfLoop;
