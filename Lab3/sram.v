@@ -1,11 +1,16 @@
-module meomry2kx8 (data_out, data_in, addr, chipEnable, writeEnable, outputEnable, clk)
+/*  This module implements SRAM based CY7C128A architecture
+    that can hold approximately 16k bits (2k X 8) and has
+    active low chip enable, active low write neable, and
+    active low output enable. */
 
-  output reg  [8:0] data_out;
+module sram(data_out, data_in, addr, chipEnable, writeEnable, outputEnable, clk)
+  output reg  [7:0] data_out;
   input wire  [7:0] data_in;
   input wire  [10:0] addr;
-  input wire chipEnable, writeEnable, outputEnable, clk;
+  input wire  chipEnable, writeEnable, outputEnable, clk;
 
-  reg [7:0] mem [10:0];
+  /* 2048 X 8 RAM architecture */
+  reg [7:0] mem [2047:0];
 
   always@(posedge clk) begin
     if (!chipEnable) begin
@@ -16,5 +21,5 @@ module meomry2kx8 (data_out, data_in, addr, chipEnable, writeEnable, outputEnabl
       end
     end
   end
-  
+
 endmodule
