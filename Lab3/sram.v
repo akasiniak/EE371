@@ -45,7 +45,7 @@ module sram_testbench;
     addr = 11'b00000000000;
     chipEnable = 1'b1;
     writeEnable = 1'b0;
-    outputEnable = 1'b1; // Should output X's.
+    outputEnable = 1'b1; // Should output all X's.
     #10
     outputEnable = 1'b0;
     // Test 2
@@ -57,7 +57,7 @@ module sram_testbench;
     #10
     addr = 11'b00000000000;
     chipEnable = 1'b1;
-    outputEnable = 1'b1; // Should output X's.
+    outputEnable = 1'b1; // Should output all X's.
     #10
     outputEnable = 1'b0;
     #10
@@ -67,9 +67,11 @@ module sram_testbench;
     chipEnable = 1'b1;
     writeEnable = 1'b1;
     #10
-    addr = 11'b00000000000;
+    addr = 11'b11111111111;
     writeEnable = 1'b0;
-    outputEnable = 1'b1; // Should output all 1's.
+    outputEnable = 1'b1; // Should output all X's.
+    #10
+    addr = 11'b00000000000; // Should output all 1's.
     #10
     outputEnable = 1'b0;
     #10
