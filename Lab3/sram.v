@@ -76,4 +76,5 @@ module sram_testbench;
     outputEnable = 1'b0;
     #10
   end
+  
 endmodule
