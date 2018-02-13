@@ -24,6 +24,8 @@ module sram(data_out, data_in, addr, chipEnable, writeEnable, outputEnable)
 
 endmodule
 
+/* Test writing to and reading from SRAM. */
+
 module sram_testbench;
   reg   [7:0] data_out;
   wire  [7:0] data_in;
@@ -35,7 +37,7 @@ module sram_testbench;
   initial begin
     $dumpfile("sram.vcd");
     $dumpvars(1, dut);
-    // Test 1
+    // Test 1: Should output all X's.
     #10
     dataIn = 8'b11111111;
     addr = 11'b00000000000;
@@ -48,7 +50,7 @@ module sram_testbench;
     outputEnable = 1'b1; // Should output all X's.
     #10
     outputEnable = 1'b0;
-    // Test 2
+    // Test 2: Should output all X's.
     #10
     dataIn = 8'b11111111;
     addr = 11'b00000000000;
@@ -61,7 +63,7 @@ module sram_testbench;
     #10
     outputEnable = 1'b0;
     #10
-    // Test 3
+    // Test 3: Should output all X's or 1's depending on memory address.
     dataIn = 8'b11111111;
     addr = 11'b00000000000;
     chipEnable = 1'b1;
@@ -76,5 +78,5 @@ module sram_testbench;
     outputEnable = 1'b0;
     #10
   end
-  
+
 endmodule
