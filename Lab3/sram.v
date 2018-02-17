@@ -33,55 +33,25 @@ module sram_testbench;
   reg   chipEnable, writeEnable, outputEnable;
 
   sram sram_test(data_out, data_in, addr, chipEnable, writeEnable, outputEnable);
-
+integer i;
   initial begin
     $dumpfile("sram.vcd");
     $dumpvars(1, sram_test);
     // Test 1: Should output all X's.
-    #10;
-    data_in = 8'b11111111;
-    addr = 11'b00000000000;
-    chipEnable = 1'b0;
-    writeEnable = 1'b1;
-    outputEnable = 1'b1;
-    #10;
-    addr = 11'b00000000000;
-    chipEnable = 1'b1;
-    writeEnable = 1'b1;
-    outputEnable = 1'b0; // Should output all X's.
-    #10;
-    outputEnable = 1'b1;
-    // Test 2: Should output all X's.
-    #10;
-    data_in = 8'b11111111;
-    addr = 11'b00000000000;
-    chipEnable = 1'b1;
-    writeEnable = 1'b0;
-    outputEnable = 1'b1;
-    #10;
-    addr = 11'b00000000000;
-    chipEnable = 1'b1;
-    writeEnable = 1'b1;
-    outputEnable = 1'b0; // Should output all X's.
-    #10;
-    outputEnable = 1'b1;
-    #10;
-    // Test 3: Should output all X's or 1's depending on memory address.
-    data_in = 8'b11111111;
-    addr = 11'b00000000000;
     chipEnable = 1'b0;
     writeEnable = 1'b0;
     outputEnable = 1'b1;
-    #10;
-    addr = 11'b11111111111;
-    chipEnable = 1'b0;
+    for(i = 0; i < 2047; i++) begin
+      addr = i;
+      data_in = i % 255;
+      #1;
+    end
     writeEnable = 1'b1;
-    outputEnable = 1'b0; // Should output all X's.
-    #10;
-    addr = 11'b00000000000; // Should output all 1's.
-    #10;
-    outputEnable = 1'b1;
-    #10;
+    outputEnable = 1'b0;
+    for(i = 0; i < 2047; i++) begin
+      addr = i;
+      #1;
+    end
   end
 
 endmodule
