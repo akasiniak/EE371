@@ -1,0 +1,53 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x2452790 .scope module, "serial2Parallel" "serial2Parallel" 2 1;
+ .timescale 0 0;
+v0x2452880_0 .var/i "bitCount", 31 0;
+v0x2495580_0 .net "clk", 0 0, C4<z>; 0 drivers
+v0x2495620_0 .var "inputData", 0 0;
+v0x24956c0_0 .net "inputSerialData", 0 0, C4<z>; 0 drivers
+v0x2495770_0 .var "outputData", 7 0;
+v0x2495810_0 .var "outputParallelData", 7 0;
+E_0x24526c0 .event posedge, v0x2495580_0;
+    .scope S_0x2452790;
+T_0 ;
+    %wait E_0x24526c0;
+    %movi 8, 10, 32;
+    %load/v 40, v0x2452880_0, 32;
+    %cmp/s 8, 40, 32;
+    %jmp/0xz  T_0.0, 5;
+    %load/v 8, v0x2495770_0, 8;
+    %ix/load 0, 8, 0;
+    %assign/v0 v0x2495810_0, 0, 8;
+    %ix/load 0, 32, 0;
+    %assign/v0 v0x2452880_0, 0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/v 8, v0x24956c0_0, 1;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x2495620_0, 0, 8;
+    %load/v 8, v0x2495620_0, 1;
+    %load/v 9, v0x2452880_0, 32;
+    %subi 9, 1, 32;
+    %ix/get/s 1, 9, 32;
+    %jmp/1 t_0, 4;
+    %ix/load 0, 1, 0;
+    %assign/v0/x1 v0x2495770_0, 0, 8;
+t_0 ;
+T_0.1 ;
+    %load/v 8, v0x2452880_0, 32;
+    %mov 40, 39, 1;
+    %addi 8, 1, 33;
+    %ix/load 0, 32, 0;
+    %assign/v0 v0x2452880_0, 0, 8;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "serial2Parallel.v";
