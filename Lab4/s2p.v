@@ -8,8 +8,8 @@ module s2p(parallelOut, serialIn, charReceived, reset, clk);
     if(reset) begin
       parallelOut <= 8'd0;
     end else begin
-      allData = allData << 1;
-      allData[0] = serialIn;
+      allData = allData << 1; // allData = allData >> 1 ? Right bit-shift?
+      allData[0] = serialIn;  // Use <= non-blocking assignments?
     end
   end
 
