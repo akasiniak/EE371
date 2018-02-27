@@ -1,11 +1,11 @@
 //module that identifies the start bit of a sent character. allows the counting
 //circuits to begin running.
-module startBitDetect(startBitDetected, characterReceived, data, clk, reset);
+module startBitDetect(startBitDetected, characterReceived, data, bitCount, clk, reset);
   output reg startBitDetected;
   input wire characterReceived, data, clk, reset;
+  input wire [3:0] bitCount;
 
   reg readingData;
-
 
   always@(posedge clk) begin
     if(reset) begin
@@ -19,7 +19,7 @@ module startBitDetect(startBitDetected, characterReceived, data, clk, reset);
   always@(*) begin //readingData is a state machine that keeps track of whether the start bit has been detected
     case(readingData)
       1'b1: begin
-        if(characterReceived) begin //only stop reading when the entirety of the character has been received
+        if(bitCount == 11) begin //only stop reading when the entirety of the character has been received
           readingData = 1'b0;
         end
       end
@@ -35,40 +35,40 @@ module startBitDetect(startBitDetected, characterReceived, data, clk, reset);
   end
 endmodule
 
-module startBitDetect_testbench;
-  wire startBitDetected;
-  reg characterReceived, data, clk, reset;
+// module startBitDetect_testbench;
+//   wire startBitDetected;
+//   reg characterReceived, data, clk, reset;
 
-  startBitDetect dut(startBitDetected, characterReceived, data, clk, reset);
+//   startBitDetect dut(startBitDetected, characterReceived, data, clk, reset);
 
-  parameter ClockDelay = 2;
-  initial begin //setup the clock
-    clk <= 0;
-    forever begin
-      #(ClockDelay/2);
-      clk <= ~clk;
-    end
-  end
+//   parameter ClockDelay = 2;
+//   initial begin //setup the clock
+//     clk <= 0;
+//     forever begin
+//       #(ClockDelay/2);
+//       clk <= ~clk;
+//     end
+//   end
 
-  initial begin
-    $dumpfile("startBitDetect.vcd");
-    $dumpvars(1,dut);
-    reset <= 1'b1;
-    #ClockDelay;
-    reset <= 1'b0;
-    #ClockDelay;
-    data = 1'b1;
-    characterReceived = 1'b0;
-    #ClockDelay;
-    characterReceived = 1'b1;
-    #ClockDelay;
-    characterReceived = 1'b0;
-    data = 1'b0;
-    #ClockDelay;
-    #ClockDelay;
-    #ClockDelay;
-    characterReceived = 1'b1;
-    #ClockDelay;
-    $finish;
-  end
-endmodule
+//   initial begin
+//     $dumpfile("startBitDetect.vcd");
+//     $dumpvars(1,dut);
+//     reset <= 1'b1;
+//     #ClockDelay;
+//     reset <= 1'b0;
+//     #ClockDelay;
+//     data = 1'b1;
+//     characterReceived = 1'b0;
+//     #ClockDelay;
+//     characterReceived = 1'b1;
+//     #ClockDelay;
+//     characterReceived = 1'b0;
+//     data = 1'b0;
+//     #ClockDelay;
+//     #ClockDelay;
+//     #ClockDelay;
+//     characterReceived = 1'b1;
+//     #ClockDelay;
+//     $finish;
+//   end
+// endmodule

@@ -1,0 +1,38 @@
+[*]
+[*] GTKWave Analyzer v3.3.48 (w)1999-2013 BSI
+[*] Sun Feb 25 23:18:20 2018
+[*]
+[dumpfile] "/Users/alexkasiniak/EE371/Lab4/networkHardware.vcd"
+[dumpfile_mtime] "Sun Feb 25 23:12:25 2018"
+[dumpfile_size] 862
+[savefile] "/Users/alexkasiniak/EE371/Lab4/networkHardware.gtkw"
+[timestart] 0
+[size] 1920 1058
+[pos] 1439 -451
+*0.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] networkHardware_testbench.
+[sst_width] 188
+[signals_width] 150
+[sst_expanded] 1
+[sst_vpaned_height] 323
+@28
+networkHardware_testbench.dut.CLOCK_50
+networkHardware_testbench.dut.KEY[2:0]
+networkHardware_testbench.dut.characterReceived
+networkHardware_testbench.dut.characterSent
+networkHardware_testbench.dut.load
+@22
+networkHardware_testbench.dut.parallelDataIn[7:0]
+networkHardware_testbench.dut.parallelDataOut[7:0]
+@28
+networkHardware_testbench.dut.serialDataIn
+networkHardware_testbench.dut.serialDataOut
+networkHardware_testbench.dut.transmitEnable
+networkHardware_testbench.dut.startBitDetected
+networkHardware_testbench.dut.BSC2BICIn
+networkHardware_testbench.dut.BSC2BICOut
+networkHardware_testbench.dut.BSCClockIn
+@29
+networkHardware_testbench.dut.BSCClockOut
+[pattern_trace] 1
+[pattern_trace] 0
