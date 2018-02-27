@@ -10,7 +10,7 @@ module bitIdentifierCount(characterReceived, enable, bitReceived, bitCount, clk,
     end
   end
   always@(posedge bitReceived) begin
-    if(reset) begin
+    if(reset || !enable) begin
       characterReceived <= 1'b0;
       bitCount <= 4'b0000;
     end else if (enable) begin
@@ -19,10 +19,7 @@ module bitIdentifierCount(characterReceived, enable, bitReceived, bitCount, clk,
         characterReceived <= 1'b1;
         bitCount <= 4'b0000;
       end
-    end else if (!enable)begin
-        characterReceived <= 1'b0;
-        bitCount <= 4'b0000;
-      end
+    end
   end
 endmodule
 

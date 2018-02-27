@@ -19,7 +19,7 @@ module startBitDetect(startBitDetected, characterReceived, data, bitCount, clk, 
   always@(*) begin //readingData is a state machine that keeps track of whether the start bit has been detected
     case(readingData)
       1'b1: begin
-        if(bitCount == 11) begin //only stop reading when the entirety of the character has been received
+        if(bitCount == 0) begin //only stop reading when the entirety of the character has been received
           readingData = 1'b0;
         end
       end
