@@ -55,13 +55,13 @@ module networkHardware_testbench;
   	initial begin
 	   $dumpfile("networkHardware.vcd");
 	   $dumpvars(1,dut);
-	   reset <= 1'b0;
+	   reset <= 1'b1;
 	   serialDataIn <= 1'b1;
 	   transmitEnable <= 1'b0;
 	   load <= 1'b0;
 	   parallelDataOut <= 8'd0;
 	   #ClockDelay;
-	   reset <= 1'b1;
+	   reset <= 1'b0;
 	   #ClockDelay;
 	   $display("beginning transmission at: %d", $time);
 	   transmitEnable <= 1'b1;

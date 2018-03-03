@@ -19,8 +19,6 @@ module s2p(parallelOut, serialIn, charReceived, reset, clk);
       allData[7] <= allData[6];
       allData[8] <= allData[7];
       allData[9] <= allData[8];
-      allData = allData << 1; // allData = allData >> 1 ? Right bit-shift?
-      allData[0] = serialIn;  // Use <= non-blocking assignments?
     end
   end
 
