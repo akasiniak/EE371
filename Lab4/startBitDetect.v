@@ -10,22 +10,26 @@ module startBitDetect(startBitDetected, characterReceived, data, bitCount, clk, 
   always@(posedge clk) begin
     if(reset) begin
       startBitDetected = 1'b0;
-      readingData = 1'b0;
     end else begin
       startBitDetected <= readingData;
     end
   end
 
   always@(*) begin //readingData is a state machine that keeps track of whether the start bit has been detected
-    case(readingData)
+    case(startBitDetected)
       1'b1: begin
-        if(bitCount == 0) begin //only stop reading when the entirety of the character has been received
+        if(bitCount == 1001) begin //only stop reading when the entirety of the character has been received
           readingData = 1'b0;
+        end
+        else begin
+          readingData = 1'b1;
         end
       end
       1'b0: begin
         if(!data) begin //begin reading when receiving the start bit
           readingData = 1'b1;
+        end else begin
+          readingData = 1'b0;
         end
       end
       default: begin

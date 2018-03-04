@@ -1,17 +1,32 @@
-module p2s(serialOut, parallelIn, load, clk, reset);
+module p2s(serialOut, parallelIn, load, clk, controlledClock, reset);
   output reg serialOut;
   input wire [7:0] parallelIn;
-  input load, clk, reset;
+  input wire load, clk, reset, controlledClock;
 
   reg [9:0] loadBuffer;
+  reg alreadyLoaded, alreadyRead;
   initial serialOut <= 1'b1;
 
   always@(posedge clk) begin
     if(reset) begin
       serialOut <= 1'b1;
       loadBuffer <= 10'b1111111111;
-    end else begin
-      serialOut <= loadBuffer[9];
+      alreadyRead <= 1'b0;
+      alreadyLoaded <= 1'b0;
+    end else if (load && !alreadyLoaded) begin
+       loadBuffer[1] <= parallelIn[0];
+       loadBuffer[2] <= parallelIn[1];
+       loadBuffer[3] <= parallelIn[2];
+       loadBuffer[4] <= parallelIn[3];
+       loadBuffer[5] <= parallelIn[4];
+       loadBuffer[6] <= parallelIn[5];
+       loadBuffer[7] <= parallelIn[6];
+       loadBuffer[8] <= parallelIn[7];
+       loadBuffer[9] <= 1'b0;
+       $display("load buffer: %b", loadBuffer);
+    end
+    else if(controlledClock && !alreadyRead)begin
+      serialOut = loadBuffer[9];
       loadBuffer[9] <= loadBuffer[8];
       loadBuffer[8] <= loadBuffer[7];
       loadBuffer[7] <= loadBuffer[6];
@@ -22,19 +37,12 @@ module p2s(serialOut, parallelIn, load, clk, reset);
       loadBuffer[2] <= loadBuffer[1];
       loadBuffer[1] <= loadBuffer[0];
       loadBuffer[0] <= 1'b1;
+      alreadyRead <= 1'b1;
     end
-  end
-  always@(posedge load) begin
-     loadBuffer[0] <= 1'b1;
-     loadBuffer[1] <= parallelIn[0];
-     loadBuffer[2] <= parallelIn[1];
-     loadBuffer[3] <= parallelIn[2];
-     loadBuffer[4] <= parallelIn[3];
-     loadBuffer[5] <= parallelIn[4];
-     loadBuffer[6] <= parallelIn[5];
-     loadBuffer[7] <= parallelIn[6];
-     loadBuffer[8] <= parallelIn[7];
-     loadBuffer[9] <= 1'b0;
+    else if(!controlledClock && alreadyRead)begin
+      alreadyRead <= 1'b0;
+    end
+    alreadyLoaded <= load;
   end
 endmodule
 

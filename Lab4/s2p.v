@@ -4,22 +4,17 @@ module s2p(parallelOut, serialIn, charReceived, reset, clk);
 
   reg [9:0] allData;
   reg [3:0] count;
-
   always@(posedge clk) begin
-    if(reset) begin
-      parallelOut <= 8'd0;
-    end else begin
-      allData[0] <= serialIn;
-      allData[1] <= allData[0];
-      allData[2] <= allData[1];
-      allData[3] <= allData[2];
-      allData[4] <= allData[3];
-      allData[5] <= allData[4];
-      allData[6] <= allData[5];
-      allData[7] <= allData[6];
-      allData[8] <= allData[7];
-      allData[9] <= allData[8];
-    end
+    allData[0] <= serialIn;
+    allData[1] <= allData[0];
+    allData[2] <= allData[1];
+    allData[3] <= allData[2];
+    allData[4] <= allData[3];
+    allData[5] <= allData[4];
+    allData[6] <= allData[5];
+    allData[7] <= allData[6];
+    allData[8] <= allData[7];
+    allData[9] <= allData[8];
   end
 
   always@(posedge charReceived)begin
