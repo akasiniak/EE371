@@ -3,7 +3,6 @@ module s2p(parallelOut, serialIn, charReceived, reset, clk);
   input wire serialIn, charReceived, reset, clk;
 
   reg [9:0] allData;
-  reg [3:0] count;
   always@(posedge clk) begin
     allData[0] <= serialIn;
     allData[1] <= allData[0];

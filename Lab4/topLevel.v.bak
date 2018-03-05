@@ -1,0 +1,5 @@
+module topLevel(LEDR, GPIOin, GPIOout, SW, KEY, CLOCK_50) begin
+	input [9:0] LEDR;
+	input [8:0] SW;
+	input
+end

@@ -1,28 +1,26 @@
-module bitIdentifierCount(characterReceived, enable, bitCount, clk, reset);
+module bitIdentifierCount(characterReceived, enable, bitCount, controlledClock, reset, clk, load);
   output reg characterReceived;
-  input wire enable, bitReceived, clk, reset;
+  input wire enable, clk, reset, controlledClock, load;
   output reg [3:0] bitCount;
-  reg characterReceivedState;
-  initial bitCount = 4'b0000;
   always@(posedge clk) begin
     if(reset) begin
-      bitCount <= 4'b0000;
-      characterReceived = 1'b0;
-    end else if (enable) begin
-      bitCount <= bitCount + 1'b1;
+			bitCount <= 4'b0000;
+			characterReceived <= 1'b0;
+    end 
+	 else if (enable && controlledClock && load) begin
+		bitCount <= bitCount + 1'b1;
       if(bitCount == 4'b1001) begin
         characterReceived <= 1'b1;
         bitCount <= 4'b0000;
       end else begin
         characterReceived <= 1'b0;
       end
-    end else begin
-      characterReceived <= 1'b0;
-      bitCount <= 4'b0000;
-    end
-    $display("characterReceived : %d", bitCount);
+    end else if(!load) begin
+		bitCount <= 4'b0000;
+	 end
   end
-  // always@(posedge bitReceived) begin
+  
+// always@(posedge bitReceived) begin
   //   if(reset || !enable) begin
   //     characterReceived <= 1'b0;
   //     bitCount <= 4'b0000;

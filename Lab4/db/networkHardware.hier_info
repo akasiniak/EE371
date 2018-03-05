@@ -1,0 +1,247 @@
+|topLevel
+LEDR[0] <= networkHardware:UART.port5
+LEDR[1] <= networkHardware:UART.port5
+LEDR[2] <= networkHardware:UART.port5
+LEDR[3] <= networkHardware:UART.port5
+LEDR[4] <= networkHardware:UART.port5
+LEDR[5] <= networkHardware:UART.port5
+LEDR[6] <= networkHardware:UART.port5
+LEDR[7] <= networkHardware:UART.port5
+LEDR[8] <= networkHardware:UART.port6
+LEDR[9] <= networkHardware:UART.port7
+GPIOin => GPIOin.IN1
+GPIOout <= networkHardware:UART.port9
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+CLOCK_50 => CLOCK_50.IN2
+
+
+|topLevel|keyHolder:resetKey
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+in => always0.IN1
+clk => out~reg0.CLK
+controlledClock => always0.IN1
+
+
+|topLevel|keyHolder:loadKey
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+in => always0.IN1
+clk => out~reg0.CLK
+controlledClock => always0.IN1
+
+
+|topLevel|networkHardware:UART
+reset => reset.IN7
+clk => clk.IN4
+transmitEnable => transmitEnable.IN2
+parallelDataOut[0] => parallelDataOut[0].IN1
+parallelDataOut[1] => parallelDataOut[1].IN1
+parallelDataOut[2] => parallelDataOut[2].IN1
+parallelDataOut[3] => parallelDataOut[3].IN1
+parallelDataOut[4] => parallelDataOut[4].IN1
+parallelDataOut[5] => parallelDataOut[5].IN1
+parallelDataOut[6] => parallelDataOut[6].IN1
+parallelDataOut[7] => parallelDataOut[7].IN1
+load => load.IN1
+parallelDataIn[0] <= s2p:dataIn.port0
+parallelDataIn[1] <= s2p:dataIn.port0
+parallelDataIn[2] <= s2p:dataIn.port0
+parallelDataIn[3] <= s2p:dataIn.port0
+parallelDataIn[4] <= s2p:dataIn.port0
+parallelDataIn[5] <= s2p:dataIn.port0
+parallelDataIn[6] <= s2p:dataIn.port0
+parallelDataIn[7] <= s2p:dataIn.port0
+characterReceived <= characterReceived.DB_MAX_OUTPUT_PORT_TYPE
+characterSent <= bitIdentifierCount:outDataBIC.port0
+serialDataIn => serialDataIn.IN2
+serialDataOut <= p2s:dataOut.port0
+
+
+|topLevel|networkHardware:UART|bitIdentifierCount:outDataBIC
+characterReceived <= characterReceived~reg0.DB_MAX_OUTPUT_PORT_TYPE
+enable => bitCount.OUTPUTSELECT
+enable => bitCount.OUTPUTSELECT
+enable => bitCount.OUTPUTSELECT
+enable => bitCount.OUTPUTSELECT
+enable => characterReceived.OUTPUTSELECT
+bitCount[0] <= bitCount[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bitCount[1] <= bitCount[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bitCount[2] <= bitCount[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bitCount[3] <= bitCount[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => characterReceived~reg0.CLK
+clk => bitCount[0]~reg0.CLK
+clk => bitCount[1]~reg0.CLK
+clk => bitCount[2]~reg0.CLK
+clk => bitCount[3]~reg0.CLK
+reset => bitCount.OUTPUTSELECT
+reset => bitCount.OUTPUTSELECT
+reset => bitCount.OUTPUTSELECT
+reset => bitCount.OUTPUTSELECT
+reset => characterReceived.OUTPUTSELECT
+
+
+|topLevel|networkHardware:UART|bitSampleCount:outDataBSC
+clockControl <= clockControl~reg0.DB_MAX_OUTPUT_PORT_TYPE
+enable => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+enable => clockControl.OUTPUTSELECT
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => clockControl~reg0.CLK
+reset => clockControl.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+
+
+|topLevel|networkHardware:UART|p2s:dataOut
+serialOut <= serialOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallelIn[0] => loadBuffer.DATAB
+parallelIn[1] => loadBuffer.DATAB
+parallelIn[2] => loadBuffer.DATAB
+parallelIn[3] => loadBuffer.DATAB
+parallelIn[4] => loadBuffer.DATAB
+parallelIn[5] => loadBuffer.DATAB
+parallelIn[6] => loadBuffer.DATAB
+parallelIn[7] => loadBuffer.DATAB
+load => always0.IN1
+load => alreadyLoaded.DATAIN
+clk => serialOut~reg0.CLK
+clk => alreadyLoaded.CLK
+clk => loadBuffer[0].CLK
+clk => loadBuffer[1].CLK
+clk => loadBuffer[2].CLK
+clk => loadBuffer[3].CLK
+clk => loadBuffer[4].CLK
+clk => loadBuffer[5].CLK
+clk => loadBuffer[6].CLK
+clk => loadBuffer[7].CLK
+clk => loadBuffer[8].CLK
+clk => loadBuffer[9].CLK
+controlledClock => serialOut.OUTPUTSELECT
+controlledClock => loadBuffer.OUTPUTSELECT
+controlledClock => loadBuffer.OUTPUTSELECT
+controlledClock => loadBuffer.OUTPUTSELECT
+controlledClock => loadBuffer.OUTPUTSELECT
+controlledClock => loadBuffer.OUTPUTSELECT
+controlledClock => loadBuffer.OUTPUTSELECT
+controlledClock => loadBuffer.OUTPUTSELECT
+controlledClock => loadBuffer.OUTPUTSELECT
+controlledClock => loadBuffer.OUTPUTSELECT
+controlledClock => loadBuffer.OUTPUTSELECT
+reset => loadBuffer.OUTPUTSELECT
+reset => loadBuffer.OUTPUTSELECT
+reset => loadBuffer.OUTPUTSELECT
+reset => loadBuffer.OUTPUTSELECT
+reset => loadBuffer.OUTPUTSELECT
+reset => loadBuffer.OUTPUTSELECT
+reset => loadBuffer.OUTPUTSELECT
+reset => loadBuffer.OUTPUTSELECT
+reset => loadBuffer.OUTPUTSELECT
+reset => loadBuffer.OUTPUTSELECT
+reset => serialOut~reg0.ENA
+
+
+|topLevel|networkHardware:UART|s2p:dataIn
+parallelOut[0] <= parallelOut[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallelOut[1] <= parallelOut[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallelOut[2] <= parallelOut[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallelOut[3] <= parallelOut[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallelOut[4] <= parallelOut[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallelOut[5] <= parallelOut[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallelOut[6] <= parallelOut[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallelOut[7] <= parallelOut[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+serialIn => allData[0].DATAIN
+charReceived => parallelOut[0]~reg0.CLK
+charReceived => parallelOut[1]~reg0.CLK
+charReceived => parallelOut[2]~reg0.CLK
+charReceived => parallelOut[3]~reg0.CLK
+charReceived => parallelOut[4]~reg0.CLK
+charReceived => parallelOut[5]~reg0.CLK
+charReceived => parallelOut[6]~reg0.CLK
+charReceived => parallelOut[7]~reg0.CLK
+reset => ~NO_FANOUT~
+clk => allData[0].CLK
+clk => allData[1].CLK
+clk => allData[2].CLK
+clk => allData[3].CLK
+clk => allData[4].CLK
+clk => allData[5].CLK
+clk => allData[6].CLK
+clk => allData[7].CLK
+clk => allData[8].CLK
+
+
+|topLevel|networkHardware:UART|bitIdentifierCount:inDataBIC
+characterReceived <= characterReceived~reg0.DB_MAX_OUTPUT_PORT_TYPE
+enable => bitCount.OUTPUTSELECT
+enable => bitCount.OUTPUTSELECT
+enable => bitCount.OUTPUTSELECT
+enable => bitCount.OUTPUTSELECT
+enable => characterReceived.OUTPUTSELECT
+bitCount[0] <= bitCount[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bitCount[1] <= bitCount[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bitCount[2] <= bitCount[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bitCount[3] <= bitCount[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => characterReceived~reg0.CLK
+clk => bitCount[0]~reg0.CLK
+clk => bitCount[1]~reg0.CLK
+clk => bitCount[2]~reg0.CLK
+clk => bitCount[3]~reg0.CLK
+reset => bitCount.OUTPUTSELECT
+reset => bitCount.OUTPUTSELECT
+reset => bitCount.OUTPUTSELECT
+reset => bitCount.OUTPUTSELECT
+reset => characterReceived.OUTPUTSELECT
+
+
+|topLevel|networkHardware:UART|bitSampleCount:inDataBSC
+clockControl <= clockControl~reg0.DB_MAX_OUTPUT_PORT_TYPE
+enable => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+enable => clockControl.OUTPUTSELECT
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => clockControl~reg0.CLK
+reset => clockControl.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+
+
+|topLevel|networkHardware:UART|startBitDetect:detector
+startBitDetected <= startBitDetected~reg0.DB_MAX_OUTPUT_PORT_TYPE
+characterReceived => ~NO_FANOUT~
+data => always1.IN1
+data => always1.IN1
+bitCount[0] => Equal0.IN3
+bitCount[0] => Equal1.IN3
+bitCount[1] => Equal0.IN1
+bitCount[1] => Equal1.IN2
+bitCount[2] => Equal0.IN2
+bitCount[2] => Equal1.IN1
+bitCount[3] => Equal0.IN0
+bitCount[3] => Equal1.IN0
+clk => startBitDetected~reg0.CLK
+reset => startBitDetected.OUTPUTSELECT
+
+

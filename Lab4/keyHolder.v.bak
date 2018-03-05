@@ -1,0 +1,9 @@
+module keyHolder(out, in, clk, controlledClock, reset);
+	input in, clk, controlledClock, reset;
+	output out;
+	
+	always@(clk) begin
+		
+	end
+endmodule
+

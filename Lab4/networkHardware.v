@@ -1,9 +1,3 @@
-`include "p2s.v"
-`include "s2p.v"
-`include "startBitDetect.v"
-`include "bitSampleCount.v"
-`include "bitIdentifierCount.v"
-`include "bitIdentifierCountReceive.v"
 module networkHardware(reset, clk, transmitEnable, parallelDataOut, load, parallelDataIn, characterReceived, characterSent, serialDataIn, serialDataOut);
 	input wire reset, clk;
 	input wire serialDataIn;
@@ -16,13 +10,15 @@ module networkHardware(reset, clk, transmitEnable, parallelDataOut, load, parall
 	wire BSCClockOut, BSCClockIn;
 	wire startBitDetected;
 	wire [3:0] bitCountIn, bitCountOut;
-
-	bitIdentifierCount outDataBIC(characterSent, transmitEnable, bitCountOut, BSCClockOut, reset);
+	wire heldLoad;
+	
+	loadHolder holdLoad(heldLoad, load, bitCountOut, clk, reset);
+	bitIdentifierCount outDataBIC(characterSent, transmitEnable, bitCountOut, BSCClockOut, reset, clk, heldLoad);
 	bitSampleCount outDataBSC(BSCClockOut, transmitEnable, clk, reset);
 	p2s dataOut(serialDataOut, parallelDataOut, load, clk, BSCClockOut, reset);
 	
 	s2p dataIn(parallelDataIn, serialDataIn, characterReceived, reset, BSCClockIn);
-	bitIdentifierCount inDataBIC(characterReceived, startBitDetected, bitCountIn, BSCClockIn, reset);
+	bitIdentifierCount inDataBIC(characterReceived, startBitDetected, bitCountIn, BSCClockIn, reset, clk, 1'b1);
 	bitSampleCount inDataBSC(BSCClockIn, startBitDetected, clk, reset);
 	startBitDetect detector(startBitDetected, characterReceived, serialDataIn, bitCountIn, clk, reset);
 endmodule
@@ -68,7 +64,7 @@ module networkHardware_testbench;
 	   parallelDataOut <= 8'b01010101;
 	   load <= 1'b1;
 	   #ClockDelay;
-	   for(i = 0; i < 176; i++) begin
+	   for(i = 0; i < 176; i = i + 1) begin
 	   	#ClockDelay;
 	   end
 	   transmitEnable <= 1'b0;
@@ -79,7 +75,7 @@ module networkHardware_testbench;
 	   #ClockDelay;
 	   load <= 1'b0;
 	   #ClockDelay;
-	   for(i = 0; i < 176; i++) begin
+	   for(i = 0; i < 176; i = i + 1) begin
 	   	#ClockDelay;
 	   end
 	   transmitEnable <= 1'b0;

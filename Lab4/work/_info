@@ -1,0 +1,326 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/alexrkas/Desktop/EE371/Lab4
+vbitIdentifierCount
+Z1 !s110 1520230132
+!i10b 1
+!s100 <MM>b:M`z:[2k`S>E`EW_3
+ICIDOBk:[Gk_ZIzm>G:]C32
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1520229130
+8./bitIdentifierCount.v
+F./bitIdentifierCount.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1520230132.000000
+!s107 ./bitIdentifierCount.v|
+!s90 -reportprogress|300|./bitIdentifierCount.v|
+!i113 1
+Z5 tCvgOpt 0
+nbit@identifier@count
+vbitIdentifierCountReceive
+!s110 1520227576
+!i10b 1
+!s100 N`GDF?a>jBSZIL1<z=JN92
+IjWj=XHV`S2aJdlHh;=Fge3
+R2
+R0
+Z6 w1520200645
+8C:/Users/alexrkas/Desktop/EE371/Lab4/bitIdentifierCountReceive.v
+FC:/Users/alexrkas/Desktop/EE371/Lab4/bitIdentifierCountReceive.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1520227576.000000
+!s107 C:/Users/alexrkas/Desktop/EE371/Lab4/bitIdentifierCountReceive.v|
+!s90 -reportprogress|300|-work|work|C:/Users/alexrkas/Desktop/EE371/Lab4/bitIdentifierCountReceive.v|
+!i113 1
+Z7 o-work work
+R5
+nbit@identifier@count@receive
+vbitSampleCount
+R1
+!i10b 1
+!s100 [Qk@GFUSJ4mc@30Ue]g?H2
+ICY59g@UaCG4je3Z_M2i@32
+R2
+R0
+w1520208095
+8./bitSampleCount.v
+F./bitSampleCount.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 ./bitSampleCount.v|
+!s90 -reportprogress|300|./bitSampleCount.v|
+!i113 1
+R5
+nbit@sample@count
+vkeyHolder
+R1
+!i10b 1
+!s100 =gUT;OXB2f8ZJ4;ZTDZRL2
+IlFh3;J3_O?zF>7m@lZCO=3
+R2
+R0
+Z8 w1520214513
+Z9 8./keyHolder.v
+Z10 F./keyHolder.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+Z11 !s107 ./keyHolder.v|
+Z12 !s90 -reportprogress|300|./keyHolder.v|
+!i113 1
+R5
+nkey@holder
+vkeyHolder_testbench
+R1
+!i10b 1
+!s100 eUUY:0[Me_IojzlT5DblQ2
+IVF;77XI@i=[acmGiX;d3m1
+R2
+R0
+R8
+R9
+R10
+L0 20
+R3
+r1
+!s85 0
+31
+R4
+R11
+R12
+!i113 1
+R5
+nkey@holder_testbench
+vloadHolder
+!s110 1520230133
+!i10b 1
+!s100 8TMV40aWM^9^^^HGiY=ZE2
+Iog]Y6aOY7T>K@S2Q=df>]3
+R2
+R0
+w1520230129
+8./loadHolder.v
+F./loadHolder.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1520230133.000000
+!s107 ./loadHolder.v|
+!s90 -reportprogress|300|./loadHolder.v|
+!i113 1
+R5
+nload@holder
+vnetworkHardware
+R1
+!i10b 1
+!s100 Vj]dA;R[3A_eeWj];PSX:1
+IIlC4z`NohJTL<F^lQF5o;3
+R2
+R0
+Z13 w1520228730
+Z14 8./networkHardware.v
+Z15 F./networkHardware.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+Z16 !s107 ./networkHardware.v|
+Z17 !s90 -reportprogress|300|./networkHardware.v|
+!i113 1
+R5
+nnetwork@hardware
+vnetworkHardware_testbench
+R1
+!i10b 1
+!s100 >J_Z^:o00N[zMQRQ:kHHf0
+IGnXU<FWFM=6]I[AYDSRRg1
+R2
+R0
+R13
+R14
+R15
+L0 26
+R3
+r1
+!s85 0
+31
+R4
+R16
+R17
+!i113 1
+R5
+nnetwork@hardware_testbench
+vp2s
+R1
+!i10b 1
+!s100 TOEZI1?[:58W5F[2^2ZMR1
+I?W6ZfPP_54W_>bFi^U<U]0
+R2
+R0
+w1520201392
+8./p2s.v
+F./p2s.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 ./p2s.v|
+!s90 -reportprogress|300|./p2s.v|
+!i113 1
+R5
+vparallel2Serial
+Z18 !s110 1520227577
+!i10b 1
+!s100 :DbLGWcoY4L;4^fDBel2>3
+IFEO`5;zeO^5h=VMbkLhVK2
+R2
+R0
+R6
+8C:/Users/alexrkas/Desktop/EE371/Lab4/parallel2Serial.v
+FC:/Users/alexrkas/Desktop/EE371/Lab4/parallel2Serial.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z19 !s108 1520227577.000000
+!s107 C:/Users/alexrkas/Desktop/EE371/Lab4/parallel2Serial.v|
+!s90 -reportprogress|300|-work|work|C:/Users/alexrkas/Desktop/EE371/Lab4/parallel2Serial.v|
+!i113 1
+R7
+R5
+nparallel2@serial
+vs2p
+R1
+!i10b 1
+!s100 ZJ39`NT]40ZIfUM44[35o3
+IIk]m>OP7^[hNFU=_en<ZB1
+R2
+R0
+w1520216322
+8./s2p.v
+F./s2p.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 ./s2p.v|
+!s90 -reportprogress|300|./s2p.v|
+!i113 1
+R5
+vserial2Parallel
+R18
+!i10b 1
+!s100 N4SzCz[=5cVMYz?gmmNFl2
+I1?RngH2U5bCCR[A>=jZf80
+R2
+R0
+w1520200646
+8C:/Users/alexrkas/Desktop/EE371/Lab4/serial2Parallel.v
+FC:/Users/alexrkas/Desktop/EE371/Lab4/serial2Parallel.v
+L0 1
+R3
+r1
+!s85 0
+31
+R19
+!s107 C:/Users/alexrkas/Desktop/EE371/Lab4/serial2Parallel.v|
+!s90 -reportprogress|300|-work|work|C:/Users/alexrkas/Desktop/EE371/Lab4/serial2Parallel.v|
+!i113 1
+R7
+R5
+nserial2@parallel
+vstartBitDetect
+R1
+!i10b 1
+!s100 J2OgNWcO3nMJ1U6R_IS<c0
+IRlg[C3aC`i]=G8nY_^8A_3
+R2
+R0
+w1520209575
+8./startBitDetect.v
+F./startBitDetect.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 ./startBitDetect.v|
+!s90 -reportprogress|300|./startBitDetect.v|
+!i113 1
+R5
+nstart@bit@detect
+vtopLevel
+R1
+!i10b 1
+!s100 ^6eb2MCSKU5czc3dg[VWY0
+I[kJR6hE1ZcBH63_0l9jeK1
+R2
+R0
+Z20 w1520227523
+Z21 8./topLevel.v
+Z22 F./topLevel.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+Z23 !s107 ./topLevel.v|
+Z24 !s90 -reportprogress|300|./topLevel.v|
+!i113 1
+R5
+ntop@level
+vtopLevel_testbench
+R1
+!i10b 1
+!s100 B?mB6QRhco3^:2WJkU8Rb0
+I1AY`@L`OKIoJk[:XY6V[k0
+R2
+R0
+R20
+R21
+R22
+L0 33
+R3
+r1
+!s85 0
+31
+R4
+R23
+R24
+!i113 1
+R5
+ntop@level_testbench
