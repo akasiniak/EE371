@@ -1,16 +1,16 @@
 |topLevel
-LEDR[0] <= networkHardware:UART.port5
-LEDR[1] <= networkHardware:UART.port5
-LEDR[2] <= networkHardware:UART.port5
-LEDR[3] <= networkHardware:UART.port5
-LEDR[4] <= networkHardware:UART.port5
-LEDR[5] <= networkHardware:UART.port5
-LEDR[6] <= networkHardware:UART.port5
-LEDR[7] <= networkHardware:UART.port5
-LEDR[8] <= networkHardware:UART.port6
-LEDR[9] <= networkHardware:UART.port7
+LEDR[0] << networkHardware:UART.port5
+LEDR[1] << networkHardware:UART.port5
+LEDR[2] << networkHardware:UART.port5
+LEDR[3] << networkHardware:UART.port5
+LEDR[4] << networkHardware:UART.port5
+LEDR[5] << networkHardware:UART.port5
+LEDR[6] << networkHardware:UART.port5
+LEDR[7] << networkHardware:UART.port5
+LEDR[8] << networkHardware:UART.port6
+LEDR[9] << networkHardware:UART.port7
 GPIOin => GPIOin.IN1
-GPIOout <= networkHardware:UART.port9
+GPIOout << networkHardware:UART.port9
 SW[0] => SW[0].IN1
 SW[1] => SW[1].IN1
 SW[2] => SW[2].IN1
@@ -22,6 +22,41 @@ SW[7] => SW[7].IN1
 SW[8] => SW[8].IN1
 KEY[0] => KEY[0].IN1
 KEY[1] => KEY[1].IN1
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => counter.OUTPUTSELECT
+KEY[2] => controlledClock.OUTPUTSELECT
+KEY[2] => _.IN1
+KEY[2] => _.IN1
 CLOCK_50 => CLOCK_50.IN2
 
 
@@ -30,6 +65,7 @@ out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 in => always0.IN1
 clk => out~reg0.CLK
 controlledClock => always0.IN1
+reset => out.OUTPUTSELECT
 
 
 |topLevel|keyHolder:loadKey
@@ -37,11 +73,12 @@ out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 in => always0.IN1
 clk => out~reg0.CLK
 controlledClock => always0.IN1
+reset => out.OUTPUTSELECT
 
 
 |topLevel|networkHardware:UART
-reset => reset.IN7
-clk => clk.IN4
+reset => reset.IN8
+clk => clk.IN7
 transmitEnable => transmitEnable.IN2
 parallelDataOut[0] => parallelDataOut[0].IN1
 parallelDataOut[1] => parallelDataOut[1].IN1
@@ -51,7 +88,7 @@ parallelDataOut[4] => parallelDataOut[4].IN1
 parallelDataOut[5] => parallelDataOut[5].IN1
 parallelDataOut[6] => parallelDataOut[6].IN1
 parallelDataOut[7] => parallelDataOut[7].IN1
-load => load.IN1
+load => load.IN2
 parallelDataIn[0] <= s2p:dataIn.port0
 parallelDataIn[1] <= s2p:dataIn.port0
 parallelDataIn[2] <= s2p:dataIn.port0
@@ -66,27 +103,42 @@ serialDataIn => serialDataIn.IN2
 serialDataOut <= p2s:dataOut.port0
 
 
+|topLevel|networkHardware:UART|loadHolder:holdLoad
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+in => nsOut.DATAA
+count[0] => Equal0.IN1
+count[1] => Equal0.IN3
+count[2] => Equal0.IN2
+count[3] => Equal0.IN0
+clk => countReached.CLK
+clk => out~reg0.CLK
+reset => out.OUTPUTSELECT
+reset => countReached.ENA
+
+
 |topLevel|networkHardware:UART|bitIdentifierCount:outDataBIC
 characterReceived <= characterReceived~reg0.DB_MAX_OUTPUT_PORT_TYPE
-enable => bitCount.OUTPUTSELECT
-enable => bitCount.OUTPUTSELECT
-enable => bitCount.OUTPUTSELECT
-enable => bitCount.OUTPUTSELECT
-enable => characterReceived.OUTPUTSELECT
+enable => always0.IN0
 bitCount[0] <= bitCount[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 bitCount[1] <= bitCount[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 bitCount[2] <= bitCount[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 bitCount[3] <= bitCount[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clk => characterReceived~reg0.CLK
-clk => bitCount[0]~reg0.CLK
-clk => bitCount[1]~reg0.CLK
-clk => bitCount[2]~reg0.CLK
-clk => bitCount[3]~reg0.CLK
+controlledClock => always0.IN1
 reset => bitCount.OUTPUTSELECT
 reset => bitCount.OUTPUTSELECT
 reset => bitCount.OUTPUTSELECT
 reset => bitCount.OUTPUTSELECT
 reset => characterReceived.OUTPUTSELECT
+clk => characterReceived~reg0.CLK
+clk => bitCount[0]~reg0.CLK
+clk => bitCount[1]~reg0.CLK
+clk => bitCount[2]~reg0.CLK
+clk => bitCount[3]~reg0.CLK
+load => always0.IN1
+load => bitCount.OUTPUTSELECT
+load => bitCount.OUTPUTSELECT
+load => bitCount.OUTPUTSELECT
+load => bitCount.OUTPUTSELECT
 
 
 |topLevel|networkHardware:UART|bitSampleCount:outDataBSC
@@ -188,25 +240,27 @@ clk => allData[8].CLK
 
 |topLevel|networkHardware:UART|bitIdentifierCount:inDataBIC
 characterReceived <= characterReceived~reg0.DB_MAX_OUTPUT_PORT_TYPE
-enable => bitCount.OUTPUTSELECT
-enable => bitCount.OUTPUTSELECT
-enable => bitCount.OUTPUTSELECT
-enable => bitCount.OUTPUTSELECT
-enable => characterReceived.OUTPUTSELECT
+enable => always0.IN0
 bitCount[0] <= bitCount[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 bitCount[1] <= bitCount[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 bitCount[2] <= bitCount[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 bitCount[3] <= bitCount[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clk => characterReceived~reg0.CLK
-clk => bitCount[0]~reg0.CLK
-clk => bitCount[1]~reg0.CLK
-clk => bitCount[2]~reg0.CLK
-clk => bitCount[3]~reg0.CLK
+controlledClock => always0.IN1
 reset => bitCount.OUTPUTSELECT
 reset => bitCount.OUTPUTSELECT
 reset => bitCount.OUTPUTSELECT
 reset => bitCount.OUTPUTSELECT
 reset => characterReceived.OUTPUTSELECT
+clk => characterReceived~reg0.CLK
+clk => bitCount[0]~reg0.CLK
+clk => bitCount[1]~reg0.CLK
+clk => bitCount[2]~reg0.CLK
+clk => bitCount[3]~reg0.CLK
+load => always0.IN1
+load => bitCount.OUTPUTSELECT
+load => bitCount.OUTPUTSELECT
+load => bitCount.OUTPUTSELECT
+load => bitCount.OUTPUTSELECT
 
 
 |topLevel|networkHardware:UART|bitSampleCount:inDataBSC
@@ -234,13 +288,9 @@ characterReceived => ~NO_FANOUT~
 data => always1.IN1
 data => always1.IN1
 bitCount[0] => Equal0.IN3
-bitCount[0] => Equal1.IN3
-bitCount[1] => Equal0.IN1
-bitCount[1] => Equal1.IN2
-bitCount[2] => Equal0.IN2
-bitCount[2] => Equal1.IN1
+bitCount[1] => Equal0.IN2
+bitCount[2] => Equal0.IN1
 bitCount[3] => Equal0.IN0
-bitCount[3] => Equal1.IN0
 clk => startBitDetected~reg0.CLK
 reset => startBitDetected.OUTPUTSELECT
 

@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for networkHardware
-Sun Mar 04 16:04:27 2018
+Sun Mar 04 22:34:19 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 
 
@@ -99,14 +99,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.09        ;
+; Average used               ; 1.10        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.1%      ;
-;     Processor 3            ;   3.0%      ;
-;     Processor 4            ;   2.9%      ;
+;     Processor 2            ;   3.4%      ;
+;     Processor 3            ;   3.3%      ;
+;     Processor 4            ;   3.2%      ;
 +----------------------------+-------------+
 
 
@@ -119,20 +119,18 @@ refer to the applicable agreement for further details.
 ; controlledClock                                                     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { controlledClock }                                                     ;
 ; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived } ;
 ; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { networkHardware:UART|bitSampleCount:inDataBSC|clockControl }          ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { networkHardware:UART|bitSampleCount:outDataBSC|clockControl }         ;
 +---------------------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                                                                ;
-+------------+-----------------+-------------------------------------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                                                  ; Note ;
-+------------+-----------------+-------------------------------------------------------------+------+
-; 154.01 MHz ; 154.01 MHz      ; CLOCK_50                                                    ;      ;
-; 303.4 MHz  ; 303.4 MHz       ; controlledClock                                             ;      ;
-; 390.93 MHz ; 390.93 MHz      ; networkHardware:UART|bitSampleCount:inDataBSC|clockControl  ;      ;
-; 450.25 MHz ; 450.25 MHz      ; networkHardware:UART|bitSampleCount:outDataBSC|clockControl ;      ;
-+------------+-----------------+-------------------------------------------------------------+------+
++--------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                                               ;
++------------+-----------------+------------------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                                 ; Note ;
++------------+-----------------+------------------------------------------------------------+------+
+; 154.61 MHz ; 154.61 MHz      ; CLOCK_50                                                   ;      ;
+; 334.34 MHz ; 334.34 MHz      ; controlledClock                                            ;      ;
+; 530.22 MHz ; 530.22 MHz      ; networkHardware:UART|bitSampleCount:inDataBSC|clockControl ;      ;
++------------+-----------------+------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -147,25 +145,23 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                            ; -5.493 ; -118.834      ;
-; controlledClock                                                     ; -5.421 ; -99.037       ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; -4.529 ; -29.473       ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; -3.772 ; -17.993       ;
-; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -1.229 ; -8.440        ;
+; CLOCK_50                                                            ; -5.468 ; -97.628       ;
+; controlledClock                                                     ; -4.656 ; -137.073      ;
+; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -1.255 ; -9.334        ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; -0.886 ; -8.822        ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                                                           ;
-+---------------------------------------------------------------------+--------+---------------+
-; Clock                                                               ; Slack  ; End Point TNS ;
-+---------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                            ; -1.330 ; -2.130        ;
-; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; 0.294  ; 0.000         ;
-; controlledClock                                                     ; 0.359  ; 0.000         ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 0.492  ; 0.000         ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; 0.650  ; 0.000         ;
-+---------------------------------------------------------------------+--------+---------------+
++---------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                                                          ;
++---------------------------------------------------------------------+-------+---------------+
+; Clock                                                               ; Slack ; End Point TNS ;
++---------------------------------------------------------------------+-------+---------------+
+; CLOCK_50                                                            ; 0.254 ; 0.000         ;
+; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; 0.337 ; 0.000         ;
+; controlledClock                                                     ; 0.369 ; 0.000         ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 0.639 ; 0.000         ;
++---------------------------------------------------------------------+-------+---------------+
 
 
 ------------------------------------------
@@ -185,11 +181,10 @@ No paths to report.
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                            ; -0.440 ; -25.997       ;
-; controlledClock                                                     ; -0.394 ; -11.585       ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; -0.394 ; -7.252        ;
-; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -0.394 ; -4.192        ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; -0.394 ; -2.615        ;
+; CLOCK_50                                                            ; -0.410 ; -18.417       ;
+; controlledClock                                                     ; -0.394 ; -19.241       ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; -0.394 ; -6.603        ;
+; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -0.394 ; -4.264        ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -200,16 +195,15 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 
 
 
-+---------------------------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                                                                 ;
-+------------+-----------------+-------------------------------------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                                                  ; Note ;
-+------------+-----------------+-------------------------------------------------------------+------+
-; 149.61 MHz ; 149.61 MHz      ; CLOCK_50                                                    ;      ;
-; 309.12 MHz ; 309.12 MHz      ; controlledClock                                             ;      ;
-; 391.7 MHz  ; 391.7 MHz       ; networkHardware:UART|bitSampleCount:inDataBSC|clockControl  ;      ;
-; 434.03 MHz ; 434.03 MHz      ; networkHardware:UART|bitSampleCount:outDataBSC|clockControl ;      ;
-+------------+-----------------+-------------------------------------------------------------+------+
++--------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                                                                ;
++------------+-----------------+------------------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                                 ; Note ;
++------------+-----------------+------------------------------------------------------------+------+
+; 152.25 MHz ; 152.25 MHz      ; CLOCK_50                                                   ;      ;
+; 342.58 MHz ; 342.58 MHz      ; controlledClock                                            ;      ;
+; 523.83 MHz ; 523.83 MHz      ; networkHardware:UART|bitSampleCount:inDataBSC|clockControl ;      ;
++------------+-----------------+------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -218,11 +212,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                            ; -5.684 ; -116.961      ;
-; controlledClock                                                     ; -5.507 ; -100.769      ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; -4.599 ; -29.650       ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; -3.890 ; -18.682       ;
-; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -1.202 ; -8.221        ;
+; CLOCK_50                                                            ; -5.568 ; -94.111       ;
+; controlledClock                                                     ; -4.645 ; -140.274      ;
+; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -1.187 ; -8.871        ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; -0.909 ; -8.962        ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -231,11 +224,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                            ; -1.494 ; -2.460        ;
-; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; 0.306  ; 0.000         ;
-; controlledClock                                                     ; 0.372  ; 0.000         ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 0.437  ; 0.000         ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; 0.613  ; 0.000         ;
+; CLOCK_50                                                            ; -0.009 ; -0.009        ;
+; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; 0.342  ; 0.000         ;
+; controlledClock                                                     ; 0.344  ; 0.000         ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 0.642  ; 0.000         ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -256,11 +248,10 @@ No paths to report.
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                            ; -0.458 ; -28.458       ;
-; controlledClock                                                     ; -0.394 ; -11.505       ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; -0.394 ; -7.236        ;
-; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -0.394 ; -4.116        ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; -0.394 ; -2.567        ;
+; CLOCK_50                                                            ; -0.427 ; -19.783       ;
+; controlledClock                                                     ; -0.394 ; -18.775       ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; -0.394 ; -6.591        ;
+; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -0.394 ; -4.211        ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -276,11 +267,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                            ; -3.014 ; -51.038       ;
-; controlledClock                                                     ; -2.892 ; -49.463       ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; -2.249 ; -13.705       ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; -1.819 ; -8.526        ;
-; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -0.559 ; -3.547        ;
+; CLOCK_50                                                            ; -3.325 ; -48.316       ;
+; controlledClock                                                     ; -2.414 ; -67.595       ;
+; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -0.648 ; -4.353        ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; -0.271 ; -2.319        ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -289,11 +279,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                            ; -0.634 ; -0.808        ;
-; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -0.107 ; -0.208        ;
-; controlledClock                                                     ; -0.010 ; -0.010        ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 0.071  ; 0.000         ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; 0.304  ; 0.000         ;
+; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -0.086 ; -0.086        ;
+; controlledClock                                                     ; 0.016  ; 0.000         ;
+; CLOCK_50                                                            ; 0.145  ; 0.000         ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 0.266  ; 0.000         ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -314,11 +303,10 @@ No paths to report.
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                            ; -0.456 ; -4.247        ;
-; controlledClock                                                     ; 0.110  ; 0.000         ;
-; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; 0.132  ; 0.000         ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 0.132  ; 0.000         ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; 0.149  ; 0.000         ;
+; CLOCK_50                                                            ; -0.438 ; -3.523        ;
+; controlledClock                                                     ; 0.030  ; 0.000         ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 0.075  ; 0.000         ;
+; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; 0.096  ; 0.000         ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -334,11 +322,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                            ; -2.780 ; -43.179       ;
-; controlledClock                                                     ; -2.723 ; -47.302       ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; -2.155 ; -12.649       ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; -1.776 ; -8.388        ;
-; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -0.452 ; -2.822        ;
+; CLOCK_50                                                            ; -2.889 ; -40.942       ;
+; controlledClock                                                     ; -2.265 ; -65.236       ;
+; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -0.514 ; -3.431        ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; -0.207 ; -1.725        ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -347,11 +334,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                            ; -0.771 ; -1.135        ;
-; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -0.130 ; -0.391        ;
-; controlledClock                                                     ; -0.037 ; -0.037        ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 0.011  ; 0.000         ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; 0.259  ; 0.000         ;
+; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -0.116 ; -0.122        ;
+; controlledClock                                                     ; -0.013 ; -0.058        ;
+; CLOCK_50                                                            ; 0.100  ; 0.000         ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 0.244  ; 0.000         ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -372,11 +358,10 @@ No paths to report.
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                            ; -0.439 ; -4.248        ;
-; controlledClock                                                     ; 0.127  ; 0.000         ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 0.135  ; 0.000         ;
-; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; 0.141  ; 0.000         ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; 0.157  ; 0.000         ;
+; CLOCK_50                                                            ; -0.439 ; -3.476        ;
+; controlledClock                                                     ; 0.054  ; 0.000         ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 0.089  ; 0.000         ;
+; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; 0.117  ; 0.000         ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -392,18 +377,16 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------------------------------------------------+----------+--------+----------+---------+---------------------+
 ; Clock                                                                ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------------------------------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                                     ; -5.684   ; -1.494 ; N/A      ; N/A     ; -0.458              ;
-;  CLOCK_50                                                            ; -5.684   ; -1.494 ; N/A      ; N/A     ; -0.458              ;
-;  controlledClock                                                     ; -5.507   ; -0.037 ; N/A      ; N/A     ; -0.394              ;
-;  networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -1.229   ; -0.130 ; N/A      ; N/A     ; -0.394              ;
-;  networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; -4.599   ; 0.011  ; N/A      ; N/A     ; -0.394              ;
-;  networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; -3.890   ; 0.259  ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS                                                      ; -274.283 ; -2.46  ; 0.0      ; 0.0     ; -53.882             ;
-;  CLOCK_50                                                            ; -118.834 ; -2.460 ; N/A      ; N/A     ; -28.458             ;
-;  controlledClock                                                     ; -100.769 ; -0.037 ; N/A      ; N/A     ; -11.585             ;
-;  networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -8.440   ; -0.391 ; N/A      ; N/A     ; -4.192              ;
-;  networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; -29.650  ; 0.000  ; N/A      ; N/A     ; -7.252              ;
-;  networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; -18.682  ; 0.000  ; N/A      ; N/A     ; -2.615              ;
+; Worst-case Slack                                                     ; -5.568   ; -0.116 ; N/A      ; N/A     ; -0.439              ;
+;  CLOCK_50                                                            ; -5.568   ; -0.009 ; N/A      ; N/A     ; -0.439              ;
+;  controlledClock                                                     ; -4.656   ; -0.013 ; N/A      ; N/A     ; -0.394              ;
+;  networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -1.255   ; -0.116 ; N/A      ; N/A     ; -0.394              ;
+;  networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; -0.909   ; 0.244  ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS                                                      ; -252.857 ; -0.18  ; 0.0      ; 0.0     ; -49.36              ;
+;  CLOCK_50                                                            ; -97.628  ; -0.009 ; N/A      ; N/A     ; -19.783             ;
+;  controlledClock                                                     ; -140.274 ; -0.058 ; N/A      ; N/A     ; -19.241             ;
+;  networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; -9.334   ; -0.122 ; N/A      ; N/A     ; -4.264              ;
+;  networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; -8.962   ; 0.000  ; N/A      ; N/A     ; -6.603              ;
 +----------------------------------------------------------------------+----------+--------+----------+---------+---------------------+
 
 
@@ -432,9 +415,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; Pin      ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +----------+--------------+-----------------+-----------------+
 ; SW[8]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; KEY[0]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[2]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; CLOCK_50 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; GPIOin   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[0]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[1]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[7]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[6]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -452,16 +436,16 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin     ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; LEDR[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
-; LEDR[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; LEDR[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
+; LEDR[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
-; LEDR[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; LEDR[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[4] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[5] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[6] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
-; LEDR[7] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; LEDR[7] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[8] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
-; LEDR[9] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; LEDR[9] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; GPIOout ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -471,16 +455,16 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin     ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; LEDR[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
-; LEDR[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; LEDR[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
+; LEDR[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; LEDR[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
-; LEDR[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; LEDR[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[4] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; LEDR[5] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; LEDR[6] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
-; LEDR[7] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; LEDR[7] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[8] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
-; LEDR[9] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; LEDR[9] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; GPIOout ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -490,16 +474,16 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin     ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; LEDR[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
-; LEDR[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; LEDR[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; LEDR[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; LEDR[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
-; LEDR[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; LEDR[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; LEDR[4] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; LEDR[5] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; LEDR[6] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
-; LEDR[7] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; LEDR[7] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; LEDR[8] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
-; LEDR[9] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; LEDR[9] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; GPIOout ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -509,59 +493,51 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin     ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; LEDR[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
-; LEDR[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; LEDR[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; LEDR[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
-; LEDR[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; LEDR[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; LEDR[4] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[5] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[6] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
-; LEDR[7] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; LEDR[7] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; LEDR[8] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
-; LEDR[9] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; LEDR[9] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; GPIOout ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                                                                                               ;
-+-------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
-; From Clock                                                  ; To Clock                                                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+-------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
-; CLOCK_50                                                    ; CLOCK_50                                                            ; 2242     ; 0        ; 0        ; 0        ;
-; controlledClock                                             ; CLOCK_50                                                            ; 3        ; 3        ; 0        ; 0        ;
-; CLOCK_50                                                    ; controlledClock                                                     ; 48       ; 0        ; 0        ; 0        ;
-; controlledClock                                             ; controlledClock                                                     ; 63       ; 0        ; 0        ; 0        ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl  ; controlledClock                                                     ; 4        ; 0        ; 0        ; 0        ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl ; controlledClock                                                     ; 10       ; 10       ; 0        ; 0        ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl  ; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; 8        ; 0        ; 0        ; 0        ;
-; CLOCK_50                                                    ; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 5        ; 0        ; 0        ; 0        ;
-; controlledClock                                             ; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 5        ; 0        ; 0        ; 0        ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl  ; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 24       ; 0        ; 0        ; 0        ;
-; CLOCK_50                                                    ; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; 5        ; 0        ; 0        ; 0        ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl ; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; 16       ; 0        ; 0        ; 0        ;
-+-------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                                                                       ;
++---------------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                                          ; To Clock                                                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
+; CLOCK_50                                                            ; CLOCK_50                                                            ; 1594     ; 0        ; 0        ; 0        ;
+; controlledClock                                                     ; CLOCK_50                                                            ; 3        ; 3        ; 0        ; 0        ;
+; CLOCK_50                                                            ; controlledClock                                                     ; 69       ; 0        ; 0        ; 0        ;
+; controlledClock                                                     ; controlledClock                                                     ; 155      ; 0        ; 0        ; 0        ;
+; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; controlledClock                                                     ; 1        ; 1        ; 0        ; 0        ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; controlledClock                                                     ; 5        ; 5        ; 0        ; 0        ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; 8        ; 0        ; 0        ; 0        ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 11       ; 0        ; 0        ; 0        ;
++---------------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                                                                                                ;
-+-------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
-; From Clock                                                  ; To Clock                                                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+-------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
-; CLOCK_50                                                    ; CLOCK_50                                                            ; 2242     ; 0        ; 0        ; 0        ;
-; controlledClock                                             ; CLOCK_50                                                            ; 3        ; 3        ; 0        ; 0        ;
-; CLOCK_50                                                    ; controlledClock                                                     ; 48       ; 0        ; 0        ; 0        ;
-; controlledClock                                             ; controlledClock                                                     ; 63       ; 0        ; 0        ; 0        ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl  ; controlledClock                                                     ; 4        ; 0        ; 0        ; 0        ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl ; controlledClock                                                     ; 10       ; 10       ; 0        ; 0        ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl  ; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; 8        ; 0        ; 0        ; 0        ;
-; CLOCK_50                                                    ; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 5        ; 0        ; 0        ; 0        ;
-; controlledClock                                             ; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 5        ; 0        ; 0        ; 0        ;
-; networkHardware:UART|bitSampleCount:inDataBSC|clockControl  ; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 24       ; 0        ; 0        ; 0        ;
-; CLOCK_50                                                    ; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; 5        ; 0        ; 0        ; 0        ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl ; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; 16       ; 0        ; 0        ; 0        ;
-+-------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                                                                        ;
++---------------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                                          ; To Clock                                                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
+; CLOCK_50                                                            ; CLOCK_50                                                            ; 1594     ; 0        ; 0        ; 0        ;
+; controlledClock                                                     ; CLOCK_50                                                            ; 3        ; 3        ; 0        ; 0        ;
+; CLOCK_50                                                            ; controlledClock                                                     ; 69       ; 0        ; 0        ; 0        ;
+; controlledClock                                                     ; controlledClock                                                     ; 155      ; 0        ; 0        ; 0        ;
+; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; controlledClock                                                     ; 1        ; 1        ; 0        ; 0        ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; controlledClock                                                     ; 5        ; 5        ; 0        ; 0        ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; 8        ; 0        ; 0        ; 0        ;
+; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; 11       ; 0        ; 0        ; 0        ;
++---------------------------------------------------------------------+---------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -584,8 +560,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 12    ; 12   ;
-; Unconstrained Input Port Paths  ; 22    ; 22   ;
+; Unconstrained Input Ports       ; 13    ; 13   ;
+; Unconstrained Input Port Paths  ; 57    ; 57   ;
 ; Unconstrained Output Ports      ; 11    ; 11   ;
 ; Unconstrained Output Port Paths ; 11    ; 11   ;
 +---------------------------------+-------+------+
@@ -600,7 +576,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; controlledClock                                                     ; controlledClock                                                     ; Base ; Constrained ;
 ; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived ; Base ; Constrained ;
 ; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; networkHardware:UART|bitSampleCount:inDataBSC|clockControl          ; Base ; Constrained ;
-; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; networkHardware:UART|bitSampleCount:outDataBSC|clockControl         ; Base ; Constrained ;
 +---------------------------------------------------------------------+---------------------------------------------------------------------+------+-------------+
 
 
@@ -612,6 +587,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; GPIOin     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; KEY[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -651,6 +627,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; GPIOin     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; KEY[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -688,7 +665,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
-    Info: Processing started: Sun Mar 04 16:04:21 2018
+    Info: Processing started: Sun Mar 04 22:34:13 2018
 Info: Command: quartus_sta networkHardware -c networkHardware
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -700,41 +677,37 @@ Info (332142): No user constrained base clocks found in the design. Calling "der
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name controlledClock controlledClock
     Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
-    Info (332105): create_clock -period 1.000 -name networkHardware:UART|bitSampleCount:inDataBSC|clockControl networkHardware:UART|bitSampleCount:inDataBSC|clockControl
     Info (332105): create_clock -period 1.000 -name networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived
-    Info (332105): create_clock -period 1.000 -name networkHardware:UART|bitSampleCount:outDataBSC|clockControl networkHardware:UART|bitSampleCount:outDataBSC|clockControl
+    Info (332105): create_clock -period 1.000 -name networkHardware:UART|bitSampleCount:inDataBSC|clockControl networkHardware:UART|bitSampleCount:inDataBSC|clockControl
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.493
+Info (332146): Worst-case setup slack is -5.468
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.493            -118.834 CLOCK_50 
-    Info (332119):    -5.421             -99.037 controlledClock 
-    Info (332119):    -4.529             -29.473 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
-    Info (332119):    -3.772             -17.993 networkHardware:UART|bitSampleCount:outDataBSC|clockControl 
-    Info (332119):    -1.229              -8.440 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
-Info (332146): Worst-case hold slack is -1.330
+    Info (332119):    -5.468             -97.628 CLOCK_50 
+    Info (332119):    -4.656            -137.073 controlledClock 
+    Info (332119):    -1.255              -9.334 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
+    Info (332119):    -0.886              -8.822 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
+Info (332146): Worst-case hold slack is 0.254
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.330              -2.130 CLOCK_50 
-    Info (332119):     0.294               0.000 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
-    Info (332119):     0.359               0.000 controlledClock 
-    Info (332119):     0.492               0.000 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
-    Info (332119):     0.650               0.000 networkHardware:UART|bitSampleCount:outDataBSC|clockControl 
+    Info (332119):     0.254               0.000 CLOCK_50 
+    Info (332119):     0.337               0.000 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
+    Info (332119):     0.369               0.000 controlledClock 
+    Info (332119):     0.639               0.000 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.440
+Info (332146): Worst-case minimum pulse width slack is -0.410
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.440             -25.997 CLOCK_50 
-    Info (332119):    -0.394             -11.585 controlledClock 
-    Info (332119):    -0.394              -7.252 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
-    Info (332119):    -0.394              -4.192 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
-    Info (332119):    -0.394              -2.615 networkHardware:UART|bitSampleCount:outDataBSC|clockControl 
+    Info (332119):    -0.410             -18.417 CLOCK_50 
+    Info (332119):    -0.394             -19.241 controlledClock 
+    Info (332119):    -0.394              -6.603 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
+    Info (332119):    -0.394              -4.264 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
@@ -743,32 +716,29 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.684
+Info (332146): Worst-case setup slack is -5.568
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.684            -116.961 CLOCK_50 
-    Info (332119):    -5.507            -100.769 controlledClock 
-    Info (332119):    -4.599             -29.650 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
-    Info (332119):    -3.890             -18.682 networkHardware:UART|bitSampleCount:outDataBSC|clockControl 
-    Info (332119):    -1.202              -8.221 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
-Info (332146): Worst-case hold slack is -1.494
+    Info (332119):    -5.568             -94.111 CLOCK_50 
+    Info (332119):    -4.645            -140.274 controlledClock 
+    Info (332119):    -1.187              -8.871 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
+    Info (332119):    -0.909              -8.962 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
+Info (332146): Worst-case hold slack is -0.009
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.494              -2.460 CLOCK_50 
-    Info (332119):     0.306               0.000 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
-    Info (332119):     0.372               0.000 controlledClock 
-    Info (332119):     0.437               0.000 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
-    Info (332119):     0.613               0.000 networkHardware:UART|bitSampleCount:outDataBSC|clockControl 
+    Info (332119):    -0.009              -0.009 CLOCK_50 
+    Info (332119):     0.342               0.000 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
+    Info (332119):     0.344               0.000 controlledClock 
+    Info (332119):     0.642               0.000 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.458
+Info (332146): Worst-case minimum pulse width slack is -0.427
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.458             -28.458 CLOCK_50 
-    Info (332119):    -0.394             -11.505 controlledClock 
-    Info (332119):    -0.394              -7.236 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
-    Info (332119):    -0.394              -4.116 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
-    Info (332119):    -0.394              -2.567 networkHardware:UART|bitSampleCount:outDataBSC|clockControl 
+    Info (332119):    -0.427             -19.783 CLOCK_50 
+    Info (332119):    -0.394             -18.775 controlledClock 
+    Info (332119):    -0.394              -6.591 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
+    Info (332119):    -0.394              -4.211 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
@@ -777,71 +747,65 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.014
+Info (332146): Worst-case setup slack is -3.325
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.014             -51.038 CLOCK_50 
-    Info (332119):    -2.892             -49.463 controlledClock 
-    Info (332119):    -2.249             -13.705 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
-    Info (332119):    -1.819              -8.526 networkHardware:UART|bitSampleCount:outDataBSC|clockControl 
-    Info (332119):    -0.559              -3.547 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
-Info (332146): Worst-case hold slack is -0.634
+    Info (332119):    -3.325             -48.316 CLOCK_50 
+    Info (332119):    -2.414             -67.595 controlledClock 
+    Info (332119):    -0.648              -4.353 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
+    Info (332119):    -0.271              -2.319 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
+Info (332146): Worst-case hold slack is -0.086
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.634              -0.808 CLOCK_50 
-    Info (332119):    -0.107              -0.208 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
-    Info (332119):    -0.010              -0.010 controlledClock 
-    Info (332119):     0.071               0.000 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
-    Info (332119):     0.304               0.000 networkHardware:UART|bitSampleCount:outDataBSC|clockControl 
+    Info (332119):    -0.086              -0.086 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
+    Info (332119):     0.016               0.000 controlledClock 
+    Info (332119):     0.145               0.000 CLOCK_50 
+    Info (332119):     0.266               0.000 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.456
+Info (332146): Worst-case minimum pulse width slack is -0.438
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.456              -4.247 CLOCK_50 
-    Info (332119):     0.110               0.000 controlledClock 
-    Info (332119):     0.132               0.000 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
-    Info (332119):     0.132               0.000 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
-    Info (332119):     0.149               0.000 networkHardware:UART|bitSampleCount:outDataBSC|clockControl 
+    Info (332119):    -0.438              -3.523 CLOCK_50 
+    Info (332119):     0.030               0.000 controlledClock 
+    Info (332119):     0.075               0.000 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
+    Info (332119):     0.096               0.000 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.780
+Info (332146): Worst-case setup slack is -2.889
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.780             -43.179 CLOCK_50 
-    Info (332119):    -2.723             -47.302 controlledClock 
-    Info (332119):    -2.155             -12.649 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
-    Info (332119):    -1.776              -8.388 networkHardware:UART|bitSampleCount:outDataBSC|clockControl 
-    Info (332119):    -0.452              -2.822 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
-Info (332146): Worst-case hold slack is -0.771
+    Info (332119):    -2.889             -40.942 CLOCK_50 
+    Info (332119):    -2.265             -65.236 controlledClock 
+    Info (332119):    -0.514              -3.431 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
+    Info (332119):    -0.207              -1.725 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
+Info (332146): Worst-case hold slack is -0.116
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.771              -1.135 CLOCK_50 
-    Info (332119):    -0.130              -0.391 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
-    Info (332119):    -0.037              -0.037 controlledClock 
-    Info (332119):     0.011               0.000 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
-    Info (332119):     0.259               0.000 networkHardware:UART|bitSampleCount:outDataBSC|clockControl 
+    Info (332119):    -0.116              -0.122 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
+    Info (332119):    -0.013              -0.058 controlledClock 
+    Info (332119):     0.100               0.000 CLOCK_50 
+    Info (332119):     0.244               0.000 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.439
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.439              -4.248 CLOCK_50 
-    Info (332119):     0.127               0.000 controlledClock 
-    Info (332119):     0.135               0.000 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
-    Info (332119):     0.141               0.000 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
-    Info (332119):     0.157               0.000 networkHardware:UART|bitSampleCount:outDataBSC|clockControl 
+    Info (332119):    -0.439              -3.476 CLOCK_50 
+    Info (332119):     0.054               0.000 controlledClock 
+    Info (332119):     0.089               0.000 networkHardware:UART|bitSampleCount:inDataBSC|clockControl 
+    Info (332119):     0.117               0.000 networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1071 megabytes
-    Info: Processing ended: Sun Mar 04 16:04:27 2018
+    Info: Peak virtual memory: 1069 megabytes
+    Info: Processing ended: Sun Mar 04 22:34:19 2018
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:06
 

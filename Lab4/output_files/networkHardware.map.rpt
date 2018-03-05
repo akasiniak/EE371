@@ -1,5 +1,5 @@
 Analysis & Synthesis report for networkHardware
-Sun Mar 04 16:03:31 2018
+Sun Mar 04 22:33:24 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 
 
@@ -15,13 +15,11 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
   9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Port Connectivity Checks: "networkHardware:UART|bitIdentifierCount:outDataBIC"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
- 16. Analysis & Synthesis Suppressed Messages
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "networkHardware:UART|bitIdentifierCount:inDataBIC"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -47,14 +45,14 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Mar 04 16:03:30 2018           ;
+; Analysis & Synthesis Status     ; Successful - Sun Mar 04 22:33:24 2018           ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
 ; Revision Name                   ; networkHardware                                 ;
 ; Top-level Entity Name           ; topLevel                                        ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 84                                              ;
-; Total pins                      ; 24                                              ;
+; Total registers                 ; 86                                              ;
+; Total pins                      ; 25                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -167,7 +165,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -184,34 +183,35 @@ refer to the applicable agreement for further details.
 ; bitIdentifierCount.v             ; yes             ; User Verilog HDL File  ; C:/Users/alexrkas/Desktop/EE371/Lab4/bitIdentifierCount.v ;         ;
 ; startBitDetect.v                 ; yes             ; User Verilog HDL File  ; C:/Users/alexrkas/Desktop/EE371/Lab4/startBitDetect.v     ;         ;
 ; topLevel.v                       ; yes             ; User Verilog HDL File  ; C:/Users/alexrkas/Desktop/EE371/Lab4/topLevel.v           ;         ;
+; loadHolder.v                     ; yes             ; User Verilog HDL File  ; C:/Users/alexrkas/Desktop/EE371/Lab4/loadHolder.v         ;         ;
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 50             ;
-;                                             ;                ;
-; Combinational ALUT usage for logic          ; 77             ;
-;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 18             ;
-;     -- 5 input functions                    ; 6              ;
-;     -- 4 input functions                    ; 13             ;
-;     -- <=3 input functions                  ; 40             ;
-;                                             ;                ;
-; Dedicated logic registers                   ; 84             ;
-;                                             ;                ;
-; I/O pins                                    ; 24             ;
-;                                             ;                ;
-; Total DSP Blocks                            ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 35             ;
-; Total fan-out                               ; 529            ;
-; Average fan-out                             ; 2.53           ;
-+---------------------------------------------+----------------+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimate of Logic utilization (ALMs needed) ; 51              ;
+;                                             ;                 ;
+; Combinational ALUT usage for logic          ; 87              ;
+;     -- 7 input functions                    ; 0               ;
+;     -- 6 input functions                    ; 13              ;
+;     -- 5 input functions                    ; 12              ;
+;     -- 4 input functions                    ; 21              ;
+;     -- <=3 input functions                  ; 41              ;
+;                                             ;                 ;
+; Dedicated logic registers                   ; 86              ;
+;                                             ;                 ;
+; I/O pins                                    ; 25              ;
+;                                             ;                 ;
+; Total DSP Blocks                            ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; controlledClock ;
+; Maximum fan-out                             ; 37              ;
+; Total fan-out                               ; 578             ;
+; Average fan-out                             ; 2.59            ;
++---------------------------------------------+-----------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -219,15 +219,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                          ; Entity Name        ; Library Name ;
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------+--------------------+--------------+
-; |topLevel                             ; 77 (43)             ; 84 (33)                   ; 0                 ; 0          ; 24   ; 0            ; |topLevel                                                    ; topLevel           ; work         ;
+; |topLevel                             ; 87 (43)             ; 86 (33)                   ; 0                 ; 0          ; 25   ; 0            ; |topLevel                                                    ; topLevel           ; work         ;
 ;    |keyHolder:loadKey|                ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |topLevel|keyHolder:loadKey                                  ; keyHolder          ; work         ;
 ;    |keyHolder:resetKey|               ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |topLevel|keyHolder:resetKey                                 ; keyHolder          ; work         ;
-;    |networkHardware:UART|             ; 32 (0)              ; 49 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |topLevel|networkHardware:UART                               ; networkHardware    ; work         ;
-;       |bitIdentifierCount:inDataBIC|  ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |topLevel|networkHardware:UART|bitIdentifierCount:inDataBIC  ; bitIdentifierCount ; work         ;
-;       |bitIdentifierCount:outDataBIC| ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |topLevel|networkHardware:UART|bitIdentifierCount:outDataBIC ; bitIdentifierCount ; work         ;
+;    |networkHardware:UART|             ; 42 (0)              ; 51 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |topLevel|networkHardware:UART                               ; networkHardware    ; work         ;
+;       |bitIdentifierCount:inDataBIC|  ; 7 (7)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |topLevel|networkHardware:UART|bitIdentifierCount:inDataBIC  ; bitIdentifierCount ; work         ;
+;       |bitIdentifierCount:outDataBIC| ; 10 (10)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |topLevel|networkHardware:UART|bitIdentifierCount:outDataBIC ; bitIdentifierCount ; work         ;
 ;       |bitSampleCount:inDataBSC|      ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |topLevel|networkHardware:UART|bitSampleCount:inDataBSC      ; bitSampleCount     ; work         ;
 ;       |bitSampleCount:outDataBSC|     ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |topLevel|networkHardware:UART|bitSampleCount:outDataBSC     ; bitSampleCount     ; work         ;
-;       |p2s:dataOut|                   ; 11 (11)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |topLevel|networkHardware:UART|p2s:dataOut                   ; p2s                ; work         ;
+;       |loadHolder:holdLoad|           ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |topLevel|networkHardware:UART|loadHolder:holdLoad           ; loadHolder         ; work         ;
+;       |p2s:dataOut|                   ; 12 (12)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |topLevel|networkHardware:UART|p2s:dataOut                   ; p2s                ; work         ;
 ;       |s2p:dataIn|                    ; 0 (0)               ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |topLevel|networkHardware:UART|s2p:dataIn                    ; s2p                ; work         ;
 ;       |startBitDetect:detector|       ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |topLevel|networkHardware:UART|startBitDetect:detector       ; startBitDetect     ; work         ;
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------+--------------------+--------------+
@@ -249,47 +250,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 84    ;
-; Number of registers using Synchronous Clear  ; 33    ;
+; Total registers                              ; 86    ;
+; Number of registers using Synchronous Clear  ; 36    ;
 ; Number of registers using Synchronous Load   ; 9     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Clock Enable       ; 17    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; keyHolder:resetKey|out                 ; 33      ;
-; keyHolder:loadKey|out                  ; 13      ;
-; Total number of inverted registers = 2 ;         ;
-+----------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |topLevel|networkHardware:UART|bitSampleCount:inDataBSC|clockControl     ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |topLevel|networkHardware:UART|bitSampleCount:outDataBSC|count[2]        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |topLevel|counter[12]                                                    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |topLevel|networkHardware:UART|bitIdentifierCount:inDataBIC|bitCount[3]  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |topLevel|networkHardware:UART|p2s:dataOut|loadBuffer[7]                 ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |topLevel|networkHardware:UART|bitIdentifierCount:outDataBIC|bitCount[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |topLevel|networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived  ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |topLevel|networkHardware:UART|bitIdentifierCount:outDataBIC|characterReceived ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |topLevel|networkHardware:UART|bitIdentifierCount:inDataBIC|bitCount[0]        ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |topLevel|networkHardware:UART|bitIdentifierCount:outDataBIC|bitCount[0]       ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |topLevel|networkHardware:UART|p2s:dataOut|loadBuffer[8]                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "networkHardware:UART|bitIdentifierCount:outDataBIC"                                     ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; bitCount ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "networkHardware:UART|bitIdentifierCount:inDataBIC" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; load ; Input ; Info     ; Stuck at VCC                                        ;
++------+-------+----------+-----------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -297,24 +288,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 84                          ;
+; arriav_ff             ; 86                          ;
+;     ENA               ; 9                           ;
 ;     ENA SLD           ; 8                           ;
-;     SCLR              ; 33                          ;
+;     SCLR              ; 36                          ;
 ;     SLD               ; 1                           ;
-;     plain             ; 42                          ;
-; arriav_lcell_comb     ; 77                          ;
+;     plain             ; 32                          ;
+; arriav_lcell_comb     ; 87                          ;
 ;     arith             ; 32                          ;
 ;         1 data inputs ; 32                          ;
-;     normal            ; 45                          ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 13                          ;
-;         5 data inputs ; 6                           ;
-;         6 data inputs ; 18                          ;
-; boundary_port         ; 24                          ;
+;     normal            ; 55                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 21                          ;
+;         5 data inputs ; 12                          ;
+;         6 data inputs ; 13                          ;
+; boundary_port         ; 25                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.06                        ;
+; Average LUT depth     ; 2.10                        ;
 +-----------------------+-----------------------------+
 
 
@@ -333,20 +326,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
-    Info: Processing started: Sun Mar 04 16:03:19 2018
+    Info: Processing started: Sun Mar 04 22:33:13 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off networkHardware -c networkHardware
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file keyholder.v
     Info (12023): Found entity 1: keyHolder File: C:/Users/alexrkas/Desktop/EE371/Lab4/keyHolder.v Line: 1
-    Info (12023): Found entity 2: keyHolder_testbench File: C:/Users/alexrkas/Desktop/EE371/Lab4/keyHolder.v Line: 17
+    Info (12023): Found entity 2: keyHolder_testbench File: C:/Users/alexrkas/Desktop/EE371/Lab4/keyHolder.v Line: 20
 Info (12021): Found 1 design units, including 1 entities, in source file s2p.v
     Info (12023): Found entity 1: s2p File: C:/Users/alexrkas/Desktop/EE371/Lab4/s2p.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file p2s.v
     Info (12023): Found entity 1: p2s File: C:/Users/alexrkas/Desktop/EE371/Lab4/p2s.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file networkhardware.v
     Info (12023): Found entity 1: networkHardware File: C:/Users/alexrkas/Desktop/EE371/Lab4/networkHardware.v Line: 1
-    Info (12023): Found entity 2: networkHardware_testbench File: C:/Users/alexrkas/Desktop/EE371/Lab4/networkHardware.v Line: 24
+    Info (12023): Found entity 2: networkHardware_testbench File: C:/Users/alexrkas/Desktop/EE371/Lab4/networkHardware.v Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file bitsamplecount.v
     Info (12023): Found entity 1: bitSampleCount File: C:/Users/alexrkas/Desktop/EE371/Lab4/bitSampleCount.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bitidentifiercount.v
@@ -355,33 +348,29 @@ Info (12021): Found 1 design units, including 1 entities, in source file startbi
     Info (12023): Found entity 1: startBitDetect File: C:/Users/alexrkas/Desktop/EE371/Lab4/startBitDetect.v Line: 3
 Info (12021): Found 2 design units, including 2 entities, in source file toplevel.v
     Info (12023): Found entity 1: topLevel File: C:/Users/alexrkas/Desktop/EE371/Lab4/topLevel.v Line: 1
-    Info (12023): Found entity 2: topLevel_testbench File: C:/Users/alexrkas/Desktop/EE371/Lab4/topLevel.v Line: 30
+    Info (12023): Found entity 2: topLevel_testbench File: C:/Users/alexrkas/Desktop/EE371/Lab4/topLevel.v Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file loadholder.v
+    Info (12023): Found entity 1: loadHolder File: C:/Users/alexrkas/Desktop/EE371/Lab4/loadHolder.v Line: 1
 Info (12127): Elaborating entity "topLevel" for the top level hierarchy
-Info (12128): Elaborating entity "keyHolder" for hierarchy "keyHolder:resetKey" File: C:/Users/alexrkas/Desktop/EE371/Lab4/topLevel.v Line: 25
-Info (12128): Elaborating entity "networkHardware" for hierarchy "networkHardware:UART" File: C:/Users/alexrkas/Desktop/EE371/Lab4/topLevel.v Line: 27
-Info (12128): Elaborating entity "bitIdentifierCount" for hierarchy "networkHardware:UART|bitIdentifierCount:outDataBIC" File: C:/Users/alexrkas/Desktop/EE371/Lab4/networkHardware.v Line: 14
-Info (12128): Elaborating entity "bitSampleCount" for hierarchy "networkHardware:UART|bitSampleCount:outDataBSC" File: C:/Users/alexrkas/Desktop/EE371/Lab4/networkHardware.v Line: 15
-Info (12128): Elaborating entity "p2s" for hierarchy "networkHardware:UART|p2s:dataOut" File: C:/Users/alexrkas/Desktop/EE371/Lab4/networkHardware.v Line: 16
-Info (12128): Elaborating entity "s2p" for hierarchy "networkHardware:UART|s2p:dataIn" File: C:/Users/alexrkas/Desktop/EE371/Lab4/networkHardware.v Line: 18
-Info (12128): Elaborating entity "startBitDetect" for hierarchy "networkHardware:UART|startBitDetect:detector" File: C:/Users/alexrkas/Desktop/EE371/Lab4/networkHardware.v Line: 21
+Info (12128): Elaborating entity "keyHolder" for hierarchy "keyHolder:resetKey" File: C:/Users/alexrkas/Desktop/EE371/Lab4/topLevel.v Line: 28
+Info (12128): Elaborating entity "networkHardware" for hierarchy "networkHardware:UART" File: C:/Users/alexrkas/Desktop/EE371/Lab4/topLevel.v Line: 30
+Info (12128): Elaborating entity "loadHolder" for hierarchy "networkHardware:UART|loadHolder:holdLoad" File: C:/Users/alexrkas/Desktop/EE371/Lab4/networkHardware.v Line: 15
+Info (12128): Elaborating entity "bitIdentifierCount" for hierarchy "networkHardware:UART|bitIdentifierCount:outDataBIC" File: C:/Users/alexrkas/Desktop/EE371/Lab4/networkHardware.v Line: 16
+Info (12128): Elaborating entity "bitSampleCount" for hierarchy "networkHardware:UART|bitSampleCount:outDataBSC" File: C:/Users/alexrkas/Desktop/EE371/Lab4/networkHardware.v Line: 17
+Info (12128): Elaborating entity "p2s" for hierarchy "networkHardware:UART|p2s:dataOut" File: C:/Users/alexrkas/Desktop/EE371/Lab4/networkHardware.v Line: 18
+Info (12128): Elaborating entity "s2p" for hierarchy "networkHardware:UART|s2p:dataIn" File: C:/Users/alexrkas/Desktop/EE371/Lab4/networkHardware.v Line: 20
+Info (12128): Elaborating entity "startBitDetect" for hierarchy "networkHardware:UART|startBitDetect:detector" File: C:/Users/alexrkas/Desktop/EE371/Lab4/networkHardware.v Line: 23
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/alexrkas/Desktop/EE371/Lab4/output_files/networkHardware.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 119 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
+Info (21057): Implemented 129 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
     Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 95 logic cells
+    Info (21061): Implemented 104 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 767 megabytes
-    Info: Processing ended: Sun Mar 04 16:03:31 2018
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:24
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/alexrkas/Desktop/EE371/Lab4/output_files/networkHardware.map.smsg.
+    Info: Peak virtual memory: 784 megabytes
+    Info: Processing ended: Sun Mar 04 22:33:24 2018
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:23
 
 

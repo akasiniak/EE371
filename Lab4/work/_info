@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/alexrkas/Desktop/EE371/Lab4
 vbitIdentifierCount
-Z1 !s110 1520230132
+Z1 !s110 1520231374
 !i10b 1
 !s100 <MM>b:M`z:[2k`S>E`EW_3
 ICIDOBk:[Gk_ZIzm>G:]C32
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1520230132.000000
+Z4 !s108 1520231374.000000
 !s107 ./bitIdentifierCount.v|
 !s90 -reportprogress|300|./bitIdentifierCount.v|
 !i113 1
@@ -73,55 +73,55 @@ R4
 R5
 nbit@sample@count
 vkeyHolder
-R1
+Z8 !s110 1520231373
 !i10b 1
 !s100 =gUT;OXB2f8ZJ4;ZTDZRL2
 IlFh3;J3_O?zF>7m@lZCO=3
 R2
 R0
-Z8 w1520214513
-Z9 8./keyHolder.v
-Z10 F./keyHolder.v
+Z9 w1520214513
+Z10 8./keyHolder.v
+Z11 F./keyHolder.v
 L0 1
 R3
 r1
 !s85 0
 31
-R4
-Z11 !s107 ./keyHolder.v|
-Z12 !s90 -reportprogress|300|./keyHolder.v|
+Z12 !s108 1520231373.000000
+Z13 !s107 ./keyHolder.v|
+Z14 !s90 -reportprogress|300|./keyHolder.v|
 !i113 1
 R5
 nkey@holder
 vkeyHolder_testbench
-R1
+R8
 !i10b 1
 !s100 eUUY:0[Me_IojzlT5DblQ2
 IVF;77XI@i=[acmGiX;d3m1
 R2
 R0
-R8
 R9
 R10
+R11
 L0 20
 R3
 r1
 !s85 0
 31
-R4
-R11
 R12
+R13
+R14
 !i113 1
 R5
 nkey@holder_testbench
 vloadHolder
-!s110 1520230133
+R1
 !i10b 1
-!s100 8TMV40aWM^9^^^HGiY=ZE2
-Iog]Y6aOY7T>K@S2Q=df>]3
+!s100 1<28TC5;90RQ?K7ncffQ>0
+ImT?E9XlWGJ]NFI0o>Qe8j3
 R2
 R0
-w1520230129
+w1520231361
 8./loadHolder.v
 F./loadHolder.v
 L0 1
@@ -129,7 +129,7 @@ R3
 r1
 !s85 0
 31
-!s108 1520230133.000000
+R4
 !s107 ./loadHolder.v|
 !s90 -reportprogress|300|./loadHolder.v|
 !i113 1
@@ -142,17 +142,17 @@ R1
 IIlC4z`NohJTL<F^lQF5o;3
 R2
 R0
-Z13 w1520228730
-Z14 8./networkHardware.v
-Z15 F./networkHardware.v
+Z15 w1520228730
+Z16 8./networkHardware.v
+Z17 F./networkHardware.v
 L0 1
 R3
 r1
 !s85 0
 31
 R4
-Z16 !s107 ./networkHardware.v|
-Z17 !s90 -reportprogress|300|./networkHardware.v|
+Z18 !s107 ./networkHardware.v|
+Z19 !s90 -reportprogress|300|./networkHardware.v|
 !i113 1
 R5
 nnetwork@hardware
@@ -163,17 +163,17 @@ R1
 IGnXU<FWFM=6]I[AYDSRRg1
 R2
 R0
-R13
-R14
 R15
+R16
+R17
 L0 26
 R3
 r1
 !s85 0
 31
 R4
-R16
-R17
+R18
+R19
 !i113 1
 R5
 nnetwork@hardware_testbench
@@ -198,7 +198,7 @@ R4
 !i113 1
 R5
 vparallel2Serial
-Z18 !s110 1520227577
+Z20 !s110 1520227577
 !i10b 1
 !s100 :DbLGWcoY4L;4^fDBel2>3
 IFEO`5;zeO^5h=VMbkLhVK2
@@ -212,7 +212,7 @@ R3
 r1
 !s85 0
 31
-Z19 !s108 1520227577.000000
+Z21 !s108 1520227577.000000
 !s107 C:/Users/alexrkas/Desktop/EE371/Lab4/parallel2Serial.v|
 !s90 -reportprogress|300|-work|work|C:/Users/alexrkas/Desktop/EE371/Lab4/parallel2Serial.v|
 !i113 1
@@ -240,7 +240,7 @@ R4
 !i113 1
 R5
 vserial2Parallel
-R18
+R20
 !i10b 1
 !s100 N4SzCz[=5cVMYz?gmmNFl2
 I1?RngH2U5bCCR[A>=jZf80
@@ -254,7 +254,7 @@ R3
 r1
 !s85 0
 31
-R19
+R21
 !s107 C:/Users/alexrkas/Desktop/EE371/Lab4/serial2Parallel.v|
 !s90 -reportprogress|300|-work|work|C:/Users/alexrkas/Desktop/EE371/Lab4/serial2Parallel.v|
 !i113 1
@@ -289,17 +289,17 @@ R1
 I[kJR6hE1ZcBH63_0l9jeK1
 R2
 R0
-Z20 w1520227523
-Z21 8./topLevel.v
-Z22 F./topLevel.v
+Z22 w1520227523
+Z23 8./topLevel.v
+Z24 F./topLevel.v
 L0 1
 R3
 r1
 !s85 0
 31
 R4
-Z23 !s107 ./topLevel.v|
-Z24 !s90 -reportprogress|300|./topLevel.v|
+Z25 !s107 ./topLevel.v|
+Z26 !s90 -reportprogress|300|./topLevel.v|
 !i113 1
 R5
 ntop@level
@@ -310,17 +310,17 @@ R1
 I1AY`@L`OKIoJk[:XY6V[k0
 R2
 R0
-R20
-R21
 R22
+R23
+R24
 L0 33
 R3
 r1
 !s85 0
 31
 R4
-R23
-R24
+R25
+R26
 !i113 1
 R5
 ntop@level_testbench

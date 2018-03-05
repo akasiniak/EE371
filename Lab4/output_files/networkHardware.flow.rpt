@@ -1,5 +1,5 @@
 Flow report for networkHardware
-Sun Mar 04 16:04:27 2018
+Sun Mar 04 22:34:19 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Sun Mar 04 16:04:19 2018           ;
+; Flow Status                     ; Successful - Sun Mar 04 22:34:12 2018           ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
 ; Revision Name                   ; networkHardware                                 ;
 ; Top-level Entity Name           ; topLevel                                        ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 49 / 32,070 ( < 1 % )                           ;
-; Total registers                 ; 98                                              ;
-; Total pins                      ; 24 / 457 ( 5 % )                                ;
+; Logic utilization (in ALMs)     ; 53 / 32,070 ( < 1 % )                           ;
+; Total registers                 ; 89                                              ;
+; Total pins                      ; 25 / 457 ( 5 % )                                ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                           ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/04/2018 16:03:20 ;
+; Start date & time ; 03/04/2018 22:33:14 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; networkHardware     ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+-----------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+-----------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 233963777952680.152020819909292        ; --              ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 233963777952680.152023159412472        ; --              ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --              ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --              ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; topLevel    ; Top        ;
@@ -96,11 +96,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 767 MB              ; 00:00:24                           ;
-; Fitter                    ; 00:00:39     ; 1.0                     ; 2646 MB             ; 00:01:19                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 761 MB              ; 00:00:07                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.1                     ; 1071 MB             ; 00:00:06                           ;
-; Total                     ; 00:01:02     ; --                      ; --                  ; 00:01:56                           ;
+; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 784 MB              ; 00:00:22                           ;
+; Fitter                    ; 00:00:38     ; 1.0                     ; 2635 MB             ; 00:01:11                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 758 MB              ; 00:00:07                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.1                     ; 1069 MB             ; 00:00:06                           ;
+; Total                     ; 00:01:02     ; --                      ; --                  ; 00:01:46                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

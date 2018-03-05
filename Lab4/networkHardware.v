@@ -1,4 +1,4 @@
-module networkHardware(reset, clk, transmitEnable, parallelDataOut, load, parallelDataIn, characterReceived, characterSent, serialDataIn, serialDataOut);
+zmodule networkHardware(reset, clk, transmitEnable, parallelDataOut, load, parallelDataIn, characterReceived, characterSent, serialDataIn, serialDataOut);
 	input wire reset, clk;
 	input wire serialDataIn;
 	output wire serialDataOut;
