@@ -9,6 +9,38 @@
    categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element characterReceived
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element characterReceived.s1
+   {
+      datum baseAddress
+      {
+         value = "69680";
+         type = "String";
+      }
+   }
+   element characterSent
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element characterSent.s1
+   {
+      datum baseAddress
+      {
+         value = "69664";
+         type = "String";
+      }
+   }
    element clk_0
    {
       datum _sortIndex
@@ -45,31 +77,23 @@
    {
       datum baseAddress
       {
-         value = "69704";
+         value = "69768";
          type = "String";
       }
    }
-   element led_pio
+   element load
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "9";
          type = "int";
       }
    }
-   element led_pio.external_connection
-   {
-      datum _tags
-      {
-         value = "";
-         type = "String";
-      }
-   }
-   element led_pio.s1
+   element load.s1
    {
       datum baseAddress
       {
-         value = "69680";
+         value = "69696";
          type = "String";
       }
    }
@@ -89,7 +113,7 @@
          type = "String";
       }
    }
-   element switches_pio
+   element parallelInput
    {
       datum _sortIndex
       {
@@ -97,11 +121,27 @@
          type = "int";
       }
    }
-   element switches_pio.s1
+   element parallelInput.s1
    {
       datum baseAddress
       {
-         value = "69664";
+         value = "69728";
+         type = "String";
+      }
+   }
+   element parallelOutput
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element parallelOutput.s1
+   {
+      datum baseAddress
+      {
+         value = "69744";
          type = "String";
       }
    }
@@ -138,7 +178,23 @@
    {
       datum baseAddress
       {
-         value = "69696";
+         value = "69760";
+         type = "String";
+      }
+   }
+   element transmitEnable
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element transmitEnable.s1
+   {
+      datum baseAddress
+      {
+         value = "69712";
          type = "String";
       }
    }
@@ -156,25 +212,81 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="TopLevel.qpf" />
+ <parameter name="projectName" value="networkHardware.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
  <parameter name="timeStamp" value="0" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
+ <interface
+   name="characterreceived_external_connection"
+   internal="characterReceived.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="charactersent_external_connection"
+   internal="characterSent.external_connection"
+   type="conduit"
+   dir="end" />
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
-   name="led_pio_external_connection"
-   internal="led_pio.external_connection"
+   name="load_external_connection"
+   internal="load.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="parallelinput_external_connection"
+   internal="parallelInput.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="paralleloutput_external_connection"
+   internal="parallelOutput.external_connection"
    type="conduit"
    dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <interface
-   name="switches_pio_external_connection"
-   internal="switches_pio.external_connection"
+   name="transmitenable_external_connection"
+   internal="transmitEnable.external_connection"
    type="conduit"
    dir="end" />
+ <module
+   name="characterReceived"
+   kind="altera_avalon_pio"
+   version="17.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module
+   name="characterSent"
+   kind="altera_avalon_pio"
+   version="17.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
  <module name="clk_0" kind="clock_source" version="17.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -191,7 +303,7 @@
   <parameter name="cpuReset" value="false" />
   <parameter name="customInstSlavesSystemInfo" value="&lt;info/&gt;" />
   <parameter name="dataAddrWidth" value="17" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_mem.s1' start='0x8000' end='0xD000' /><slave name='cpu.jtag_debug_module' start='0x10800' end='0x11000' /><slave name='sys_clk_timer.s1' start='0x11000' end='0x11020' /><slave name='switches_pio.s1' start='0x11020' end='0x11030' /><slave name='led_pio.s1' start='0x11030' end='0x11040' /><slave name='sysid.control_slave' start='0x11040' end='0x11048' /><slave name='jtag_uart.avalon_jtag_slave' start='0x11048' end='0x11050' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_mem.s1' start='0x8000' end='0xD000' /><slave name='cpu.jtag_debug_module' start='0x10800' end='0x11000' /><slave name='sys_clk_timer.s1' start='0x11000' end='0x11020' /><slave name='characterSent.s1' start='0x11020' end='0x11030' /><slave name='characterReceived.s1' start='0x11030' end='0x11040' /><slave name='load.s1' start='0x11040' end='0x11050' /><slave name='transmitEnable.s1' start='0x11050' end='0x11060' /><slave name='parallelInput.s1' start='0x11060' end='0x11070' /><slave name='parallelOutput.s1' start='0x11070' end='0x11080' /><slave name='sysid.control_slave' start='0x11080' end='0x11088' /><slave name='jtag_uart.avalon_jtag_slave' start='0x11088' end='0x11090' /></address-map>]]></parameter>
   <parameter name="dcache_bursts" value="false" />
   <parameter name="dcache_lineSize" value="32" />
   <parameter name="dcache_numTCDM" value="0" />
@@ -327,7 +439,7 @@
   <parameter name="writeBufferDepth" value="64" />
   <parameter name="writeIRQThreshold" value="8" />
  </module>
- <module name="led_pio" kind="altera_avalon_pio" version="17.1" enabled="1">
+ <module name="load" kind="altera_avalon_pio" version="17.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
@@ -339,7 +451,7 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="10" />
+  <parameter name="width" value="1" />
  </module>
  <module
    name="onchip_mem"
@@ -374,7 +486,7 @@
   <parameter name="writable" value="true" />
  </module>
  <module
-   name="switches_pio"
+   name="parallelInput"
    kind="altera_avalon_pio"
    version="17.1"
    enabled="1">
@@ -389,7 +501,25 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="10" />
+  <parameter name="width" value="8" />
+ </module>
+ <module
+   name="parallelOutput"
+   kind="altera_avalon_pio"
+   version="17.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="255" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="8" />
  </module>
  <module
    name="sys_clk_timer"
@@ -414,13 +544,31 @@
    enabled="1">
   <parameter name="id" value="0" />
  </module>
+ <module
+   name="transmitEnable"
+   kind="altera_avalon_pio"
+   version="17.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
  <connection
    kind="avalon"
    version="17.1"
    start="cpu.data_master"
    end="jtag_uart.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011048" />
+  <parameter name="baseAddress" value="0x00011088" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -429,7 +577,7 @@
    start="cpu.data_master"
    end="sysid.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011040" />
+  <parameter name="baseAddress" value="0x00011080" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -459,7 +607,43 @@
   <parameter name="baseAddress" value="0x00011000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
- <connection kind="avalon" version="17.1" start="cpu.data_master" end="led_pio.s1">
+ <connection
+   kind="avalon"
+   version="17.1"
+   start="cpu.data_master"
+   end="parallelOutput.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011070" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="17.1"
+   start="cpu.data_master"
+   end="parallelInput.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011060" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="17.1"
+   start="cpu.data_master"
+   end="transmitEnable.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011050" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection kind="avalon" version="17.1" start="cpu.data_master" end="load.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011040" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="17.1"
+   start="cpu.data_master"
+   end="characterReceived.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00011030" />
   <parameter name="defaultConnection" value="false" />
@@ -468,7 +652,7 @@
    kind="avalon"
    version="17.1"
    start="cpu.data_master"
-   end="switches_pio.s1">
+   end="characterSent.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00011020" />
   <parameter name="defaultConnection" value="false" />
@@ -495,8 +679,24 @@
  <connection kind="clock" version="17.1" start="clk_0.clk" end="jtag_uart.clk" />
  <connection kind="clock" version="17.1" start="clk_0.clk" end="sys_clk_timer.clk" />
  <connection kind="clock" version="17.1" start="clk_0.clk" end="sysid.clk" />
- <connection kind="clock" version="17.1" start="clk_0.clk" end="led_pio.clk" />
- <connection kind="clock" version="17.1" start="clk_0.clk" end="switches_pio.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clk_0.clk"
+   end="parallelOutput.clk" />
+ <connection kind="clock" version="17.1" start="clk_0.clk" end="parallelInput.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clk_0.clk"
+   end="transmitEnable.clk" />
+ <connection kind="clock" version="17.1" start="clk_0.clk" end="load.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clk_0.clk"
+   end="characterReceived.clk" />
+ <connection kind="clock" version="17.1" start="clk_0.clk" end="characterSent.clk" />
  <connection kind="clock" version="17.1" start="clk_0.clk" end="onchip_mem.clk1" />
  <connection kind="interrupt" version="17.1" start="cpu.d_irq" end="jtag_uart.irq">
   <parameter name="irqNumber" value="16" />
@@ -523,12 +723,28 @@
    kind="reset"
    version="17.1"
    start="clk_0.clk_reset"
-   end="led_pio.reset" />
+   end="parallelOutput.reset" />
  <connection
    kind="reset"
    version="17.1"
    start="clk_0.clk_reset"
-   end="switches_pio.reset" />
+   end="parallelInput.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_0.clk_reset"
+   end="transmitEnable.reset" />
+ <connection kind="reset" version="17.1" start="clk_0.clk_reset" end="load.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_0.clk_reset"
+   end="characterReceived.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_0.clk_reset"
+   end="characterSent.reset" />
  <connection
    kind="reset"
    version="17.1"

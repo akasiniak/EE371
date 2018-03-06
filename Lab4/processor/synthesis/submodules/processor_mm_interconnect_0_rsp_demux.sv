@@ -28,8 +28,8 @@
 // ------------------------------------------
 // Generation parameters:
 //   output_name:         processor_mm_interconnect_0_rsp_demux
-//   ST_DATA_W:           93
-//   ST_CHANNEL_W:        7
+//   ST_DATA_W:           95
+//   ST_CHANNEL_W:        11
 //   NUM_OUTPUTS:         1
 //   VALID_WIDTH:         1
 // ------------------------------------------
@@ -46,8 +46,8 @@ module processor_mm_interconnect_0_rsp_demux
     // Sink
     // -------------------
     input  [1-1      : 0]   sink_valid,
-    input  [93-1    : 0]   sink_data, // ST_DATA_W=93
-    input  [7-1 : 0]   sink_channel, // ST_CHANNEL_W=7
+    input  [95-1    : 0]   sink_data, // ST_DATA_W=95
+    input  [11-1 : 0]   sink_channel, // ST_CHANNEL_W=11
     input                         sink_startofpacket,
     input                         sink_endofpacket,
     output                        sink_ready,
@@ -56,8 +56,8 @@ module processor_mm_interconnect_0_rsp_demux
     // Sources 
     // -------------------
     output reg                      src0_valid,
-    output reg [93-1    : 0] src0_data, // ST_DATA_W=93
-    output reg [7-1 : 0] src0_channel, // ST_CHANNEL_W=7
+    output reg [95-1    : 0] src0_data, // ST_DATA_W=95
+    output reg [11-1 : 0] src0_channel, // ST_CHANNEL_W=11
     output reg                      src0_startofpacket,
     output reg                      src0_endofpacket,
     input                           src0_ready,
@@ -94,7 +94,7 @@ module processor_mm_interconnect_0_rsp_demux
     // -------------------
     assign ready_vector[0] = src0_ready;
 
-    assign sink_ready = |(sink_channel & {{6{1'b0}},{ready_vector[NUM_OUTPUTS - 1 : 0]}});
+    assign sink_ready = |(sink_channel & {{10{1'b0}},{ready_vector[NUM_OUTPUTS - 1 : 0]}});
 
 endmodule
 

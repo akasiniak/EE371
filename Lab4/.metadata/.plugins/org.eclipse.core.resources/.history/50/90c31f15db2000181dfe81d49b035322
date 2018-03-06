@@ -1,0 +1,8 @@
+#include <stdio.h>
+//#include "sys/alt_stdio.h"
+#define characterSent (char *) 0x00011020
+#define characterReceived (char *) 0x00011030
+#define load (char *) 0x00011040
+#define characterSent (char *) 0x00011020
+#define characterSent (char *) 0x00011020
+#define characterSent (char *) 0x00011020

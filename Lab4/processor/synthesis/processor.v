@@ -4,10 +4,14 @@
 
 `timescale 1 ps / 1 ps
 module processor (
-		input  wire       clk_clk,                                 //                              clk.clk
-		output wire [9:0] led_pio_external_connection_export,      //      led_pio_external_connection.export
-		input  wire       reset_reset_n,                           //                            reset.reset_n
-		input  wire [9:0] switches_pio_external_connection_export  // switches_pio_external_connection.export
+		input  wire       characterreceived_external_connection_export, // characterreceived_external_connection.export
+		input  wire       charactersent_external_connection_export,     //     charactersent_external_connection.export
+		input  wire       clk_clk,                                      //                                   clk.clk
+		output wire       load_external_connection_export,              //              load_external_connection.export
+		input  wire [7:0] parallelinput_external_connection_export,     //     parallelinput_external_connection.export
+		output wire [7:0] paralleloutput_external_connection_export,    //    paralleloutput_external_connection.export
+		input  wire       reset_reset_n,                                //                                 reset.reset_n
+		output wire       transmitenable_external_connection_export     //    transmitenable_external_connection.export
 	);
 
 	wire  [31:0] cpu_data_master_readdata;                                  // mm_interconnect_0:cpu_data_master_readdata -> cpu:d_readdata
@@ -52,18 +56,48 @@ module processor (
 	wire   [2:0] mm_interconnect_0_sys_clk_timer_s1_address;                // mm_interconnect_0:sys_clk_timer_s1_address -> sys_clk_timer:address
 	wire         mm_interconnect_0_sys_clk_timer_s1_write;                  // mm_interconnect_0:sys_clk_timer_s1_write -> sys_clk_timer:write_n
 	wire  [15:0] mm_interconnect_0_sys_clk_timer_s1_writedata;              // mm_interconnect_0:sys_clk_timer_s1_writedata -> sys_clk_timer:writedata
-	wire         mm_interconnect_0_led_pio_s1_chipselect;                   // mm_interconnect_0:led_pio_s1_chipselect -> led_pio:chipselect
-	wire  [31:0] mm_interconnect_0_led_pio_s1_readdata;                     // led_pio:readdata -> mm_interconnect_0:led_pio_s1_readdata
-	wire   [1:0] mm_interconnect_0_led_pio_s1_address;                      // mm_interconnect_0:led_pio_s1_address -> led_pio:address
-	wire         mm_interconnect_0_led_pio_s1_write;                        // mm_interconnect_0:led_pio_s1_write -> led_pio:write_n
-	wire  [31:0] mm_interconnect_0_led_pio_s1_writedata;                    // mm_interconnect_0:led_pio_s1_writedata -> led_pio:writedata
-	wire  [31:0] mm_interconnect_0_switches_pio_s1_readdata;                // switches_pio:readdata -> mm_interconnect_0:switches_pio_s1_readdata
-	wire   [1:0] mm_interconnect_0_switches_pio_s1_address;                 // mm_interconnect_0:switches_pio_s1_address -> switches_pio:address
+	wire         mm_interconnect_0_paralleloutput_s1_chipselect;            // mm_interconnect_0:parallelOutput_s1_chipselect -> parallelOutput:chipselect
+	wire  [31:0] mm_interconnect_0_paralleloutput_s1_readdata;              // parallelOutput:readdata -> mm_interconnect_0:parallelOutput_s1_readdata
+	wire   [1:0] mm_interconnect_0_paralleloutput_s1_address;               // mm_interconnect_0:parallelOutput_s1_address -> parallelOutput:address
+	wire         mm_interconnect_0_paralleloutput_s1_write;                 // mm_interconnect_0:parallelOutput_s1_write -> parallelOutput:write_n
+	wire  [31:0] mm_interconnect_0_paralleloutput_s1_writedata;             // mm_interconnect_0:parallelOutput_s1_writedata -> parallelOutput:writedata
+	wire  [31:0] mm_interconnect_0_parallelinput_s1_readdata;               // parallelInput:readdata -> mm_interconnect_0:parallelInput_s1_readdata
+	wire   [1:0] mm_interconnect_0_parallelinput_s1_address;                // mm_interconnect_0:parallelInput_s1_address -> parallelInput:address
+	wire         mm_interconnect_0_transmitenable_s1_chipselect;            // mm_interconnect_0:transmitEnable_s1_chipselect -> transmitEnable:chipselect
+	wire  [31:0] mm_interconnect_0_transmitenable_s1_readdata;              // transmitEnable:readdata -> mm_interconnect_0:transmitEnable_s1_readdata
+	wire   [1:0] mm_interconnect_0_transmitenable_s1_address;               // mm_interconnect_0:transmitEnable_s1_address -> transmitEnable:address
+	wire         mm_interconnect_0_transmitenable_s1_write;                 // mm_interconnect_0:transmitEnable_s1_write -> transmitEnable:write_n
+	wire  [31:0] mm_interconnect_0_transmitenable_s1_writedata;             // mm_interconnect_0:transmitEnable_s1_writedata -> transmitEnable:writedata
+	wire         mm_interconnect_0_load_s1_chipselect;                      // mm_interconnect_0:load_s1_chipselect -> load:chipselect
+	wire  [31:0] mm_interconnect_0_load_s1_readdata;                        // load:readdata -> mm_interconnect_0:load_s1_readdata
+	wire   [1:0] mm_interconnect_0_load_s1_address;                         // mm_interconnect_0:load_s1_address -> load:address
+	wire         mm_interconnect_0_load_s1_write;                           // mm_interconnect_0:load_s1_write -> load:write_n
+	wire  [31:0] mm_interconnect_0_load_s1_writedata;                       // mm_interconnect_0:load_s1_writedata -> load:writedata
+	wire  [31:0] mm_interconnect_0_characterreceived_s1_readdata;           // characterReceived:readdata -> mm_interconnect_0:characterReceived_s1_readdata
+	wire   [1:0] mm_interconnect_0_characterreceived_s1_address;            // mm_interconnect_0:characterReceived_s1_address -> characterReceived:address
+	wire  [31:0] mm_interconnect_0_charactersent_s1_readdata;               // characterSent:readdata -> mm_interconnect_0:characterSent_s1_readdata
+	wire   [1:0] mm_interconnect_0_charactersent_s1_address;                // mm_interconnect_0:characterSent_s1_address -> characterSent:address
 	wire         irq_mapper_receiver0_irq;                                  // jtag_uart:av_irq -> irq_mapper:receiver0_irq
 	wire         irq_mapper_receiver1_irq;                                  // sys_clk_timer:irq -> irq_mapper:receiver1_irq
 	wire  [31:0] cpu_d_irq_irq;                                             // irq_mapper:sender_irq -> cpu:d_irq
-	wire         rst_controller_reset_out_reset;                            // rst_controller:reset_out -> [cpu:reset_n, irq_mapper:reset, jtag_uart:rst_n, led_pio:reset_n, mm_interconnect_0:cpu_reset_n_reset_bridge_in_reset_reset, onchip_mem:reset, rst_translator:in_reset, switches_pio:reset_n, sys_clk_timer:reset_n, sysid:reset_n]
+	wire         rst_controller_reset_out_reset;                            // rst_controller:reset_out -> [characterReceived:reset_n, characterSent:reset_n, cpu:reset_n, irq_mapper:reset, jtag_uart:rst_n, load:reset_n, mm_interconnect_0:cpu_reset_n_reset_bridge_in_reset_reset, onchip_mem:reset, parallelInput:reset_n, parallelOutput:reset_n, rst_translator:in_reset, sys_clk_timer:reset_n, sysid:reset_n, transmitEnable:reset_n]
 	wire         rst_controller_reset_out_reset_req;                        // rst_controller:reset_req -> [cpu:reset_req, onchip_mem:reset_req, rst_translator:reset_req_in]
+
+	processor_characterReceived characterreceived (
+		.clk      (clk_clk),                                         //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),                 //               reset.reset_n
+		.address  (mm_interconnect_0_characterreceived_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_characterreceived_s1_readdata), //                    .readdata
+		.in_port  (characterreceived_external_connection_export)     // external_connection.export
+	);
+
+	processor_characterReceived charactersent (
+		.clk      (clk_clk),                                     //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),             //               reset.reset_n
+		.address  (mm_interconnect_0_charactersent_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_charactersent_s1_readdata), //                    .readdata
+		.in_port  (charactersent_external_connection_export)     // external_connection.export
+	);
 
 	processor_cpu cpu (
 		.clk                                   (clk_clk),                                             //                       clk.clk
@@ -108,15 +142,15 @@ module processor (
 		.av_irq         (irq_mapper_receiver0_irq)                                   //               irq.irq
 	);
 
-	processor_led_pio led_pio (
-		.clk        (clk_clk),                                 //                 clk.clk
-		.reset_n    (~rst_controller_reset_out_reset),         //               reset.reset_n
-		.address    (mm_interconnect_0_led_pio_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_0_led_pio_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_0_led_pio_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_0_led_pio_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_0_led_pio_s1_readdata),   //                    .readdata
-		.out_port   (led_pio_external_connection_export)       // external_connection.export
+	processor_load load (
+		.clk        (clk_clk),                              //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),      //               reset.reset_n
+		.address    (mm_interconnect_0_load_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_load_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_load_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_load_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_load_s1_readdata),   //                    .readdata
+		.out_port   (load_external_connection_export)       // external_connection.export
 	);
 
 	processor_onchip_mem onchip_mem (
@@ -133,12 +167,23 @@ module processor (
 		.freeze     (1'b0)                                        // (terminated)
 	);
 
-	processor_switches_pio switches_pio (
-		.clk      (clk_clk),                                    //                 clk.clk
-		.reset_n  (~rst_controller_reset_out_reset),            //               reset.reset_n
-		.address  (mm_interconnect_0_switches_pio_s1_address),  //                  s1.address
-		.readdata (mm_interconnect_0_switches_pio_s1_readdata), //                    .readdata
-		.in_port  (switches_pio_external_connection_export)     // external_connection.export
+	processor_parallelInput parallelinput (
+		.clk      (clk_clk),                                     //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),             //               reset.reset_n
+		.address  (mm_interconnect_0_parallelinput_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_parallelinput_s1_readdata), //                    .readdata
+		.in_port  (parallelinput_external_connection_export)     // external_connection.export
+	);
+
+	processor_parallelOutput paralleloutput (
+		.clk        (clk_clk),                                        //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),                //               reset.reset_n
+		.address    (mm_interconnect_0_paralleloutput_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_paralleloutput_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_paralleloutput_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_paralleloutput_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_paralleloutput_s1_readdata),   //                    .readdata
+		.out_port   (paralleloutput_external_connection_export)       // external_connection.export
 	);
 
 	processor_sys_clk_timer sys_clk_timer (
@@ -159,6 +204,17 @@ module processor (
 		.address  (mm_interconnect_0_sysid_control_slave_address)   //              .address
 	);
 
+	processor_load transmitenable (
+		.clk        (clk_clk),                                        //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),                //               reset.reset_n
+		.address    (mm_interconnect_0_transmitenable_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_transmitenable_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_transmitenable_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_transmitenable_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_transmitenable_s1_readdata),   //                    .readdata
+		.out_port   (transmitenable_external_connection_export)       // external_connection.export
+	);
+
 	processor_mm_interconnect_0 mm_interconnect_0 (
 		.clk_0_clk_clk                           (clk_clk),                                                   //                         clk_0_clk.clk
 		.cpu_reset_n_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                            // cpu_reset_n_reset_bridge_in_reset.reset
@@ -175,6 +231,10 @@ module processor (
 		.cpu_instruction_master_read             (cpu_instruction_master_read),                               //                                  .read
 		.cpu_instruction_master_readdata         (cpu_instruction_master_readdata),                           //                                  .readdata
 		.cpu_instruction_master_readdatavalid    (cpu_instruction_master_readdatavalid),                      //                                  .readdatavalid
+		.characterReceived_s1_address            (mm_interconnect_0_characterreceived_s1_address),            //              characterReceived_s1.address
+		.characterReceived_s1_readdata           (mm_interconnect_0_characterreceived_s1_readdata),           //                                  .readdata
+		.characterSent_s1_address                (mm_interconnect_0_charactersent_s1_address),                //                  characterSent_s1.address
+		.characterSent_s1_readdata               (mm_interconnect_0_charactersent_s1_readdata),               //                                  .readdata
 		.cpu_jtag_debug_module_address           (mm_interconnect_0_cpu_jtag_debug_module_address),           //             cpu_jtag_debug_module.address
 		.cpu_jtag_debug_module_write             (mm_interconnect_0_cpu_jtag_debug_module_write),             //                                  .write
 		.cpu_jtag_debug_module_read              (mm_interconnect_0_cpu_jtag_debug_module_read),              //                                  .read
@@ -190,11 +250,11 @@ module processor (
 		.jtag_uart_avalon_jtag_slave_writedata   (mm_interconnect_0_jtag_uart_avalon_jtag_slave_writedata),   //                                  .writedata
 		.jtag_uart_avalon_jtag_slave_waitrequest (mm_interconnect_0_jtag_uart_avalon_jtag_slave_waitrequest), //                                  .waitrequest
 		.jtag_uart_avalon_jtag_slave_chipselect  (mm_interconnect_0_jtag_uart_avalon_jtag_slave_chipselect),  //                                  .chipselect
-		.led_pio_s1_address                      (mm_interconnect_0_led_pio_s1_address),                      //                        led_pio_s1.address
-		.led_pio_s1_write                        (mm_interconnect_0_led_pio_s1_write),                        //                                  .write
-		.led_pio_s1_readdata                     (mm_interconnect_0_led_pio_s1_readdata),                     //                                  .readdata
-		.led_pio_s1_writedata                    (mm_interconnect_0_led_pio_s1_writedata),                    //                                  .writedata
-		.led_pio_s1_chipselect                   (mm_interconnect_0_led_pio_s1_chipselect),                   //                                  .chipselect
+		.load_s1_address                         (mm_interconnect_0_load_s1_address),                         //                           load_s1.address
+		.load_s1_write                           (mm_interconnect_0_load_s1_write),                           //                                  .write
+		.load_s1_readdata                        (mm_interconnect_0_load_s1_readdata),                        //                                  .readdata
+		.load_s1_writedata                       (mm_interconnect_0_load_s1_writedata),                       //                                  .writedata
+		.load_s1_chipselect                      (mm_interconnect_0_load_s1_chipselect),                      //                                  .chipselect
 		.onchip_mem_s1_address                   (mm_interconnect_0_onchip_mem_s1_address),                   //                     onchip_mem_s1.address
 		.onchip_mem_s1_write                     (mm_interconnect_0_onchip_mem_s1_write),                     //                                  .write
 		.onchip_mem_s1_readdata                  (mm_interconnect_0_onchip_mem_s1_readdata),                  //                                  .readdata
@@ -202,15 +262,25 @@ module processor (
 		.onchip_mem_s1_byteenable                (mm_interconnect_0_onchip_mem_s1_byteenable),                //                                  .byteenable
 		.onchip_mem_s1_chipselect                (mm_interconnect_0_onchip_mem_s1_chipselect),                //                                  .chipselect
 		.onchip_mem_s1_clken                     (mm_interconnect_0_onchip_mem_s1_clken),                     //                                  .clken
-		.switches_pio_s1_address                 (mm_interconnect_0_switches_pio_s1_address),                 //                   switches_pio_s1.address
-		.switches_pio_s1_readdata                (mm_interconnect_0_switches_pio_s1_readdata),                //                                  .readdata
+		.parallelInput_s1_address                (mm_interconnect_0_parallelinput_s1_address),                //                  parallelInput_s1.address
+		.parallelInput_s1_readdata               (mm_interconnect_0_parallelinput_s1_readdata),               //                                  .readdata
+		.parallelOutput_s1_address               (mm_interconnect_0_paralleloutput_s1_address),               //                 parallelOutput_s1.address
+		.parallelOutput_s1_write                 (mm_interconnect_0_paralleloutput_s1_write),                 //                                  .write
+		.parallelOutput_s1_readdata              (mm_interconnect_0_paralleloutput_s1_readdata),              //                                  .readdata
+		.parallelOutput_s1_writedata             (mm_interconnect_0_paralleloutput_s1_writedata),             //                                  .writedata
+		.parallelOutput_s1_chipselect            (mm_interconnect_0_paralleloutput_s1_chipselect),            //                                  .chipselect
 		.sys_clk_timer_s1_address                (mm_interconnect_0_sys_clk_timer_s1_address),                //                  sys_clk_timer_s1.address
 		.sys_clk_timer_s1_write                  (mm_interconnect_0_sys_clk_timer_s1_write),                  //                                  .write
 		.sys_clk_timer_s1_readdata               (mm_interconnect_0_sys_clk_timer_s1_readdata),               //                                  .readdata
 		.sys_clk_timer_s1_writedata              (mm_interconnect_0_sys_clk_timer_s1_writedata),              //                                  .writedata
 		.sys_clk_timer_s1_chipselect             (mm_interconnect_0_sys_clk_timer_s1_chipselect),             //                                  .chipselect
 		.sysid_control_slave_address             (mm_interconnect_0_sysid_control_slave_address),             //               sysid_control_slave.address
-		.sysid_control_slave_readdata            (mm_interconnect_0_sysid_control_slave_readdata)             //                                  .readdata
+		.sysid_control_slave_readdata            (mm_interconnect_0_sysid_control_slave_readdata),            //                                  .readdata
+		.transmitEnable_s1_address               (mm_interconnect_0_transmitenable_s1_address),               //                 transmitEnable_s1.address
+		.transmitEnable_s1_write                 (mm_interconnect_0_transmitenable_s1_write),                 //                                  .write
+		.transmitEnable_s1_readdata              (mm_interconnect_0_transmitenable_s1_readdata),              //                                  .readdata
+		.transmitEnable_s1_writedata             (mm_interconnect_0_transmitenable_s1_writedata),             //                                  .writedata
+		.transmitEnable_s1_chipselect            (mm_interconnect_0_transmitenable_s1_chipselect)             //                                  .chipselect
 	);
 
 	processor_irq_mapper irq_mapper (

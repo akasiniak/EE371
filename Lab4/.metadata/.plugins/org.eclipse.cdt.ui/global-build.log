@@ -1,0 +1,830 @@
+18:00:09 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 7472 Bytes program size (code + initialized data).
+Info:                         12 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+18:02:50 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 7472 Bytes program size (code + initialized data).
+Info:                         12 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+18:02:54 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+18:18:08 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 7484 Bytes program size (code + initialized data).
+Info:                         12 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+18:18:12 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+18:20:25 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 7516 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+18:20:29 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+18:24:48 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 7548 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+18:24:52 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+18:30:02 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 7592 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+18:30:07 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+18:34:40 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 7588 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+18:34:45 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+18:42:19 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+transmitOrReceive.c: In function 'main':
+transmitOrReceive.c:23:9: warning: format '%d' expects argument of type 'int', but argument 2 has type 'char *' [-Wformat=]
+  printf("characterSent: %d", characterSent);
+         ^
+transmitOrReceive.c:23:9: warning: format '%d' expects argument of type 'int', but argument 2 has type 'char *' [-Wformat=]
+transmitOrReceive.c:27:9: warning: format '%d' expects argument of type 'int', but argument 2 has type 'char *' [-Wformat=]
+  printf("characterSent: %d", characterSent);
+         ^
+transmitOrReceive.c:27:9: warning: format '%d' expects argument of type 'int', but argument 2 has type 'char *' [-Wformat=]
+transmitOrReceive.c:28:9: warning: format '%d' expects argument of type 'int', but argument 2 has type 'char *' [-Wformat=]
+  printf("characterReceived: %d", characterReceived);
+         ^
+transmitOrReceive.c:28:9: warning: format '%d' expects argument of type 'int', but argument 2 has type 'char *' [-Wformat=]
+transmitOrReceive.c:32:9: warning: format '%d' expects argument of type 'int', but argument 2 has type 'char *' [-Wformat=]
+  printf("characterReceived: %d", characterReceived);
+         ^
+transmitOrReceive.c:32:9: warning: format '%d' expects argument of type 'int', but argument 2 has type 'char *' [-Wformat=]
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8152 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+18:42:23 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+18:43:01 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+Command canceled
+18:43:06 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+transmitOrReceive.c: In function 'main':
+transmitOrReceive.c:32:9: warning: format '%d' expects argument of type 'int', but argument 2 has type 'char *' [-Wformat=]
+  printf("characterReceived: %d", characterReceived);
+         ^
+transmitOrReceive.c:32:9: warning: format '%d' expects argument of type 'int', but argument 2 has type 'char *' [-Wformat=]
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8212 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+18:43:10 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+18:43:50 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8204 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+18:43:54 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+18:47:20 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8228 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+18:47:24 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+18:51:49 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8268 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+18:51:53 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+18:52:44 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8204 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+18:52:49 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+18:54:50 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 4736 Bytes program size (code + initialized data).
+Info:                         14 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+18:54:54 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+18:55:32 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8204 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+18:55:36 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+18:56:17 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8220 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+18:56:22 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:04:52 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:04:56 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:07:19 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8224 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+19:07:24 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:11:34 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:11:38 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:16:42 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8224 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+19:16:46 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:27:46 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8248 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+19:27:51 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:33:14 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+transmitOrReceive.c: In function 'main':
+transmitOrReceive.c:11:16: warning: unused variable 'i' [-Wunused-variable]
+   volatile int i;
+                ^
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8188 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+19:33:18 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:35:54 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8224 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+19:35:58 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:43:26 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+transmitOrReceive.c: In function 'main':
+transmitOrReceive.c:11:16: warning: unused variable 'i' [-Wunused-variable]
+   volatile int i;
+                ^
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8212 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+19:43:31 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:44:18 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+transmitOrReceive.c: In function 'main':
+transmitOrReceive.c:11:16: warning: unused variable 'i' [-Wunused-variable]
+   volatile int i;
+                ^
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8188 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+19:44:23 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:46:06 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+transmitOrReceive.c: In function 'main':
+transmitOrReceive.c:11:16: warning: unused variable 'i' [-Wunused-variable]
+   volatile int i;
+                ^
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8176 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+19:46:10 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:47:09 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+transmitOrReceive.c: In function 'main':
+transmitOrReceive.c:11:16: warning: unused variable 'i' [-Wunused-variable]
+   volatile int i;
+                ^
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8176 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+19:47:13 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:48:35 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+transmitOrReceive.c: In function 'main':
+transmitOrReceive.c:11:16: warning: unused variable 'i' [-Wunused-variable]
+   volatile int i;
+                ^
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+obj/default/transmitOrReceive.o: In function `main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive/transmitOrReceive.c:27: undefined reference to `fflush'
+collect2.exe: error: ld returned 1 exit status
+make: *** [transmitOrReceive.elf] Error 1
+19:49:10 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+transmitOrReceive.c: In function 'main':
+transmitOrReceive.c:27:3: warning: implicit declaration of function 'alt_fflush' [-Wimplicit-function-declaration]
+   alt_fflush(stdin);
+   ^
+transmitOrReceive.c:11:16: warning: unused variable 'i' [-Wunused-variable]
+   volatile int i;
+                ^
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+obj/default/transmitOrReceive.o: In function `main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive/transmitOrReceive.c:27: undefined reference to `alt_fflush'
+collect2.exe: error: ld returned 1 exit status
+make: *** [transmitOrReceive.elf] Error 1
+19:52:25 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+transmitOrReceive.c: In function 'main':
+transmitOrReceive.c:28:3: warning: implicit declaration of function 'alt_putbuffflush' [-Wimplicit-function-declaration]
+   alt_putbuffflush();
+   ^
+transmitOrReceive.c:11:16: warning: unused variable 'i' [-Wunused-variable]
+   volatile int i;
+                ^
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+obj/default/transmitOrReceive.o: In function `main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive/transmitOrReceive.c:28: undefined reference to `alt_putbuffflush'
+collect2.exe: error: ld returned 1 exit status
+make: *** [transmitOrReceive.elf] Error 1
+19:54:30 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+transmitOrReceive.c: In function 'main':
+transmitOrReceive.c:11:16: warning: unused variable 'i' [-Wunused-variable]
+   volatile int i;
+                ^
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8200 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+19:54:35 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:55:53 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+transmitOrReceive.c: In function 'main':
+transmitOrReceive.c:11:16: warning: unused variable 'i' [-Wunused-variable]
+   volatile int i;
+                ^
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8176 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+19:55:57 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:57:59 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+transmitOrReceive.c: In function 'main':
+transmitOrReceive.c:11:16: warning: unused variable 'i' [-Wunused-variable]
+   volatile int i;
+                ^
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 6044 Bytes program size (code + initialized data).
+Info:                         13 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+19:58:03 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]
+19:59:54 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+transmitOrReceive.c: In function 'main':
+transmitOrReceive.c:11:16: warning: unused variable 'i' [-Wunused-variable]
+   volatile int i;
+                ^
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+obj/default/transmitOrReceive.o: In function `main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive/transmitOrReceive.c:27: undefined reference to `getc'
+collect2.exe: error: ld returned 1 exit status
+make: *** [transmitOrReceive.elf] Error 1
+20:00:11 **** Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+Info: Compiling transmitOrReceive.c to obj/default/transmitOrReceive.o
+nios2-elf-gcc -xc -MP -MMD -c -I../transmitOrReceive_bsp//HAL/inc -I../transmitOrReceive_bsp/ -I../transmitOrReceive_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/transmitOrReceive.o transmitOrReceive.c
+transmitOrReceive.c: In function 'main':
+transmitOrReceive.c:11:16: warning: unused variable 'i' [-Wunused-variable]
+   volatile int i;
+                ^
+Info: Linking transmitOrReceive.elf
+nios2-elf-g++  -T'../transmitOrReceive_bsp//linker.x' -msys-crt0='../transmitOrReceive_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../transmitOrReceive_bsp/  -msmallc  -Wl,-Map=transmitOrReceive.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o transmitOrReceive.elf obj/default/transmitOrReceive.o -lm -msys-lib=m
+../transmitOrReceive_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\alexrkas\Desktop\EE371\Lab4\software\transmitOrReceive_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert transmitOrReceive.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x11080 --timestamp 1520300232 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name processor --quartus_project_dir "C:/Users/alexrkas/Desktop/EE371/Lab4" --jdi ../..//output_files/networkHardware.jdi --sopcinfo C:/Users/alexrkas/Desktop/EE371/Lab4/software/transmitOrReceive_bsp/../../processor.sopcinfo
+Info: (transmitOrReceive.elf) 8192 Bytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating transmitOrReceive.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source transmitOrReceive.elf >transmitOrReceive.objdump
+[transmitOrReceive build complete]
+20:00:16 **** Incremental Build of configuration Nios II for project transmitOrReceive ****
+make all 
+Info: Building ../transmitOrReceive_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../transmitOrReceive_bsp/
+[BSP build complete]
+[transmitOrReceive build complete]

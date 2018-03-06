@@ -1,5 +1,5 @@
 Flow report for networkHardware
-Sun Mar 04 22:34:19 2018
+Mon Mar 05 19:02:30 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Sun Mar 04 22:34:12 2018           ;
+; Flow Status                     ; Successful - Mon Mar 05 19:02:18 2018           ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
 ; Revision Name                   ; networkHardware                                 ;
 ; Top-level Entity Name           ; topLevel                                        ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 53 / 32,070 ( < 1 % )                           ;
-; Total registers                 ; 89                                              ;
-; Total pins                      ; 25 / 457 ( 5 % )                                ;
+; Logic utilization (in ALMs)     ; 1,055 / 32,070 ( 3 % )                          ;
+; Total registers                 ; 1579                                            ;
+; Total pins                      ; 16 / 457 ( 4 % )                                ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                           ;
+; Total block memory bits         ; 192,384 / 4,065,280 ( 5 % )                     ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
@@ -67,28 +67,35 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/04/2018 22:33:14 ;
+; Start date & time ; 03/05/2018 19:00:14 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; networkHardware     ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                          ;
-+-------------------------------------+----------------------------------------+-----------------+-------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------+-----------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 233963777952680.152023159412472        ; --              ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --              ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --              ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; topLevel    ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --              ; topLevel    ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --              ; topLevel    ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --              ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --              ; --          ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --              ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; topLevel                               ; networkHardware ; --          ; --         ;
-+-------------------------------------+----------------------------------------+-----------------+-------------+------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                               ;
++-------------------------------------+-------------------------------------------------------------+-----------------+-------------+------------+
+; Assignment Name                     ; Value                                                       ; Default Value   ; Entity Name ; Section Id ;
++-------------------------------------+-------------------------------------------------------------+-----------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 273440549242266.152030521406564                             ; --              ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                          ; --              ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                           ; --              ; --          ; --         ;
+; MISC_FILE                           ; processor/synthesis/../processor.cmp                        ; --              ; --          ; --         ;
+; MISC_FILE                           ; processor/synthesis/../../processor.qsys                    ; --              ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                      ; --              ; topLevel    ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                      ; --              ; topLevel    ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                      ; --              ; topLevel    ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                         ; --              ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                       ; --              ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                ; --              ; --          ; --         ;
+; SLD_FILE                            ; processor/synthesis/processor.regmap                        ; --              ; --          ; --         ;
+; SLD_FILE                            ; processor/synthesis/processor.debuginfo                     ; --              ; --          ; --         ;
+; SLD_INFO                            ; QSYS_NAME processor HAS_SOPCINFO 1 GENERATION_ID 1520300232 ; --              ; processor   ; --         ;
+; SOPCINFO_FILE                       ; processor/synthesis/../../processor.sopcinfo                ; --              ; --          ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                          ; --              ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; topLevel                                                    ; networkHardware ; --          ; --         ;
++-------------------------------------+-------------------------------------------------------------+-----------------+-------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -96,11 +103,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 784 MB              ; 00:00:22                           ;
-; Fitter                    ; 00:00:38     ; 1.0                     ; 2635 MB             ; 00:01:11                           ;
-; Assembler                 ; 00:00:07     ; 1.0                     ; 758 MB              ; 00:00:07                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.1                     ; 1069 MB             ; 00:00:06                           ;
-; Total                     ; 00:01:02     ; --                      ; --                  ; 00:01:46                           ;
+; Analysis & Synthesis      ; 00:00:42     ; 1.0                     ; 941 MB              ; 00:01:09                           ;
+; Fitter                    ; 00:01:06     ; 1.1                     ; 2741 MB             ; 00:02:35                           ;
+; Assembler                 ; 00:00:09     ; 1.0                     ; 804 MB              ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:10     ; 1.7                     ; 1147 MB             ; 00:00:16                           ;
+; Total                     ; 00:02:07     ; --                      ; --                  ; 00:04:09                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,10 +116,10 @@ refer to the applicable agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; EE-365PC12       ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; EE-365PC12       ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; EE-365PC12       ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; EE-365PC12       ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; EE-137PC16       ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; EE-137PC16       ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; EE-137PC16       ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; EE-137PC16       ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 

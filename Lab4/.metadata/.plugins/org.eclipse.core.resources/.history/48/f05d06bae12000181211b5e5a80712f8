@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include "sys/alt_stdio.h"
+#define characterSent (char *) 0x00011020
+#define characterReceived (char *) 0x00011030
+#define load (char *) 0x00011040
+#define transmitEnable (char *) 0x00011050
+#define parallelInput (char *) 0x00011060
+#define parallelOutput (char *) 0x00011070
+
+int main(){
+	*transmitEnable = 1;
+	*parallelOutput = 15;
+	*load = 1;
+	while(!*characterSent){
+		continue;
+	}
+	while(!*characterReceived){
+		continue;
+	}
+	printf("%s\n", parallelInput);
+	return 0;
+}

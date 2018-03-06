@@ -2,196 +2,84 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -5.468
-TNS   : -97.628
-
-Type  : Slow 1100mV 85C Model Setup 'controlledClock'
-Slack : -4.656
-TNS   : -137.073
-
-Type  : Slow 1100mV 85C Model Setup 'networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived'
-Slack : -1.255
-TNS   : -9.334
-
-Type  : Slow 1100mV 85C Model Setup 'networkHardware:UART|bitSampleCount:inDataBSC|clockControl'
-Slack : -0.886
-TNS   : -8.822
-
-Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.254
+Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 11.797
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived'
-Slack : 0.337
+Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.129
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'controlledClock'
-Slack : 0.369
+Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 15.442
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'networkHardware:UART|bitSampleCount:inDataBSC|clockControl'
-Slack : 0.639
+Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 1.032
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.410
-TNS   : -18.417
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'controlledClock'
-Slack : -0.394
-TNS   : -19.241
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'networkHardware:UART|bitSampleCount:inDataBSC|clockControl'
-Slack : -0.394
-TNS   : -6.603
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived'
-Slack : -0.394
-TNS   : -4.264
-
-Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -5.568
-TNS   : -94.111
-
-Type  : Slow 1100mV 0C Model Setup 'controlledClock'
-Slack : -4.645
-TNS   : -140.274
-
-Type  : Slow 1100mV 0C Model Setup 'networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived'
-Slack : -1.187
-TNS   : -8.871
-
-Type  : Slow 1100mV 0C Model Setup 'networkHardware:UART|bitSampleCount:inDataBSC|clockControl'
-Slack : -0.909
-TNS   : -8.962
-
-Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.009
-TNS   : -0.009
-
-Type  : Slow 1100mV 0C Model Hold 'networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived'
-Slack : 0.342
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.805
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'controlledClock'
-Slack : 0.344
+Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 11.842
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'networkHardware:UART|bitSampleCount:inDataBSC|clockControl'
-Slack : 0.642
+Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.116
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.427
-TNS   : -19.783
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'controlledClock'
-Slack : -0.394
-TNS   : -18.775
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'networkHardware:UART|bitSampleCount:inDataBSC|clockControl'
-Slack : -0.394
-TNS   : -6.591
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived'
-Slack : -0.394
-TNS   : -4.211
-
-Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -3.325
-TNS   : -48.316
-
-Type  : Fast 1100mV 85C Model Setup 'controlledClock'
-Slack : -2.414
-TNS   : -67.595
-
-Type  : Fast 1100mV 85C Model Setup 'networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived'
-Slack : -0.648
-TNS   : -4.353
-
-Type  : Fast 1100mV 85C Model Setup 'networkHardware:UART|bitSampleCount:inDataBSC|clockControl'
-Slack : -0.271
-TNS   : -2.319
-
-Type  : Fast 1100mV 85C Model Hold 'networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived'
-Slack : -0.086
-TNS   : -0.086
-
-Type  : Fast 1100mV 85C Model Hold 'controlledClock'
-Slack : 0.016
+Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 15.493
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.145
+Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.983
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'networkHardware:UART|bitSampleCount:inDataBSC|clockControl'
-Slack : 0.266
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.813
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.438
-TNS   : -3.523
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'controlledClock'
-Slack : 0.030
+Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 13.989
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'networkHardware:UART|bitSampleCount:inDataBSC|clockControl'
-Slack : 0.075
+Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.025
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived'
-Slack : 0.096
+Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 16.197
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.889
-TNS   : -40.942
-
-Type  : Fast 1100mV 0C Model Setup 'controlledClock'
-Slack : -2.265
-TNS   : -65.236
-
-Type  : Fast 1100mV 0C Model Setup 'networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived'
-Slack : -0.514
-TNS   : -3.431
-
-Type  : Fast 1100mV 0C Model Setup 'networkHardware:UART|bitSampleCount:inDataBSC|clockControl'
-Slack : -0.207
-TNS   : -1.725
-
-Type  : Fast 1100mV 0C Model Hold 'networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived'
-Slack : -0.116
-TNS   : -0.122
-
-Type  : Fast 1100mV 0C Model Hold 'controlledClock'
-Slack : -0.013
-TNS   : -0.058
-
-Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.100
+Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.521
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'networkHardware:UART|bitSampleCount:inDataBSC|clockControl'
-Slack : 0.244
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.792
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.439
-TNS   : -3.476
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'controlledClock'
-Slack : 0.054
+Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 14.264
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'networkHardware:UART|bitSampleCount:inDataBSC|clockControl'
-Slack : 0.089
+Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.012
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'networkHardware:UART|bitIdentifierCount:inDataBIC|characterReceived'
-Slack : 0.117
+Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 16.270
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.463
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.804
 TNS   : 0.000
 
 ------------------------------------------------------------

@@ -51,15 +51,6 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VERILOG_FILE keyHolder.v
-set_global_assignment -name VERILOG_FILE s2p.v
-set_global_assignment -name VERILOG_FILE p2s.v
-set_global_assignment -name VERILOG_FILE networkHardware.v
-set_global_assignment -name VERILOG_FILE bitSampleCount.v
-set_global_assignment -name VERILOG_FILE bitIdentifierCount.v
-set_global_assignment -name VERILOG_FILE startBitDetect.v
-set_global_assignment -name VERILOG_FILE topLevel.v
-set_global_assignment -name VERILOG_FILE loadHolder.v
 set_location_assignment PIN_Y21 -to LEDR[9]
 set_location_assignment PIN_W21 -to LEDR[8]
 set_location_assignment PIN_W20 -to LEDR[7]
@@ -85,4 +76,15 @@ set_location_assignment PIN_AJ21 -to GPIOout
 set_location_assignment PIN_AG18 -to GPIOin
 set_location_assignment PIN_AF14 -to CLOCK_50
 set_location_assignment PIN_W15 -to KEY[2]
+set_global_assignment -name SOURCE_FILE processor.sopcinfo
+set_global_assignment -name QIP_FILE processor/synthesis/processor.qip
+set_global_assignment -name VERILOG_FILE keyHolder.v
+set_global_assignment -name VERILOG_FILE s2p.v
+set_global_assignment -name VERILOG_FILE p2s.v
+set_global_assignment -name VERILOG_FILE networkHardware.v
+set_global_assignment -name VERILOG_FILE bitSampleCount.v
+set_global_assignment -name VERILOG_FILE bitIdentifierCount.v
+set_global_assignment -name VERILOG_FILE startBitDetect.v
+set_global_assignment -name VERILOG_FILE topLevel.v
+set_global_assignment -name VERILOG_FILE loadHolder.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

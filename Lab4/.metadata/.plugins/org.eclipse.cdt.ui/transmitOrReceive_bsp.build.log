@@ -1,0 +1,6 @@
+16:58:02 **** Clean-only build of configuration Nios II for project transmitOrReceive_bsp ****
+make clean 
+[BSP clean complete]
+
+16:58:03 Build Finished (took 937ms)
+
